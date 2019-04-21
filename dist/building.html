@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+    <title>Building</title>
+    <link rel="stylesheet" href="/css/app.css">
+</head>
+<body class="text-base font-normal font-sans bg-white text-black leading-loose">
+    <div id="app">
+        <header class="bg-white p-2 flex flex-col md:flex-row items-center md:justify-between">
+    <a class="font-semibold no-underline text-primary font-bold text-xl" href="/">
+        Systatic
+    </a>
+    <nav class="flex flex-col md:flex-row items-center">
+                    <a class="font-semibold no-underline text-primary mx-2" href="/docs">
+                Documentation
+            </a>
+                    <a class="font-semibold no-underline text-primary mx-2" href="/changelog">
+                Changelog
+            </a>
+                    <a class="font-semibold no-underline text-primary mx-2" href="https://github.com/damcclean/systatic">
+                Github
+            </a>
+            </nav>
+</header>        <section class="bg-jupiter p-12 text-center mb-8">
+    <h1 class="text-70px">Building</h1>
+            <select class="bg-white p-2" name="documentation" onchange="window.document.location.href=this.options[this.selectedIndex].value;">
+                            <option value="/getting-started">Getting Started</option>
+                            <option value="/building">Building</option>
+                            <option value="/deploying">Deploying</option>
+                            <option value="/configuration">Configuration</option>
+                            <option value="/content">Content</option>
+                            <option value="/templating">Templating</option>
+                    </select>
+    </section><section class="container mx-auto">
+    <p>When you have made changes to your content or views then you'll need to rebuild your site.</p>
+<p>To rebuild your site run the following command from the root of your Systatic project.</p>
+<pre><code>php systatic build</code></pre>
+<p>Systatic will generate static HTML files and place them in your output directory, wherever that might be. By default, that directory is <code>dist</code>.</p>
+</section>
+    </div>
+    <script src="/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+    <title>Configuration</title>
+    <link rel="stylesheet" href="/css/app.css">
+</head>
+<body class="text-base font-normal font-sans bg-white text-black leading-loose">
+    <div id="app">
+        <header class="bg-white p-2 flex flex-col md:flex-row items-center md:justify-between">
+    <a class="font-semibold no-underline text-primary font-bold text-xl" href="/">
+        Systatic
+    </a>
+    <nav class="flex flex-col md:flex-row items-center">
+                    <a class="font-semibold no-underline text-primary mx-2" href="/docs">
+                Documentation
+            </a>
+                    <a class="font-semibold no-underline text-primary mx-2" href="/changelog">
+                Changelog
+            </a>
+                    <a class="font-semibold no-underline text-primary mx-2" href="https://github.com/damcclean/systatic">
+                Github
+            </a>
+            </nav>
+</header>        <section class="bg-jupiter p-12 text-center mb-8">
+    <h1 class="text-70px">Configuration</h1>
+            <select class="bg-white p-2" name="documentation" onchange="window.document.location.href=this.options[this.selectedIndex].value;">
+                            <option value="/getting-started">Getting Started</option>
+                            <option value="/building">Building</option>
+                            <option value="/deploying">Deploying</option>
+                            <option value="/configuration">Configuration</option>
+                            <option value="/content">Content</option>
+                            <option value="/templating">Templating</option>
+                    </select>
+    </section><section class="container mx-auto">
+    <p>Configuration is simple! Every Systatic site has a <code>config.php</code> file which has settings required to build your site.</p>
+<p>Your <code>config.php</code> will look like this:</p>
+<pre><code>&lt;?php
+
+return [
+    'siteName' =&gt; 'Awesome Website',
+    'siteUrl' =&gt; '/',
+    'outputDir' =&gt; './tests/site/dist',
+    'contentDir' =&gt; './tests/site/content',
+    'viewsDir' =&gt; './tests/site/views',
+    'storageDir' =&gt; './tests/site/storage'
+];</code></pre>
+<h2>Settings</h2>
+<ul>
+<li><code>siteName</code> - <strong>Required</strong> Site name</li>
+<li><code>siteUrl</code> - <strong>Required</strong> Base URL of your site. You can leave it as <code>/</code> or provide a full URL like <code>https://example.com/</code>. Make sure to include the ending slash.</li>
+<li><code>outputDir</code> - <strong>Required</strong> Where you want your HTML files to go. You should have your web server serve files from here.</li>
+<li><code>contentDir</code> - <strong>Required</strong> Where your Markdown files live</li>
+<li><code>viewsDir</code> - <strong>Required</strong> Where your Laravel Blade views live</li>
+<li><code>storageDir</code> - <strong>Required</strong> Where you want all of the Systatic storage files to live.</li>
+<li><code>redirects</code> - An array of redirects, <a href="https://github.com/damcclean/Systatic/wiki/Redirects">read more</a>.</li>
+</ul>
+<h1>Env Variables</h1>
+<p>If you have things like API keys or variables you would like to keep out of version control of different on each env then you can use <code>.env</code> files. </p>
+</section>
+    </div>
+    <script src="/js/app.js"></script>
+</body>
+</html>

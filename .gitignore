@@ -1,0 +1,9 @@
+.env
+node_modules
+vendor
+.DS_Store
+package-lock.json
+
+dist/mix-manifest.json
+dist/css/app.css
+dist/js/app.js
