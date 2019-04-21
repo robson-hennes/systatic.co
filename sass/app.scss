@@ -18,9 +18,37 @@
 /*
     Code Blocks
 */
+
 pre {
     @apply .bg-grey-lightest .my-4 .p-4 .font-mono .text-base;
-    code {
-        
+}
+
+/*
+    Links
+*/
+
+a {
+    @apply .text-primary;
+}
+
+/*
+    Footer
+*/
+
+.intravert-space {
+    @apply .flex-col .justify-center .items-center;
+    display: flex!important;
+}
+
+.space-available {
+    span.placeholder-text {
+        @apply .text-2xl;
     }
+    a.placeholder_button {
+
+    }
+}
+
+.booking-text {
+    @apply .text-2xl;
 }
