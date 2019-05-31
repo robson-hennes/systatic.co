@@ -23,7 +23,7 @@ composer require damcclean/systatic
 3. Copy files across
 
 ```
-cp -a vendor/damcclean/systatic/stubs/ ./
+cp -a vendor/damcclean/systatic/stubs/site .
 ```
 
 4. Build your site
