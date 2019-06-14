@@ -3,7 +3,7 @@
 @section('body')
 @include('partials.hero')
 
-<section class="p-12">
+<section class="p-4 md:p-12">
     <div class="md:w-2/5 md:mx-auto text-center">
         <h2 class="text-primary text-3xl font-semibold">Get Started</h2>
         <p>We made Systatic as simple as possible to get started! No <span>sample content</span>, no <span>frontend frameworks</span>. We leave it up to <span>you</span>!</p>
@@ -24,7 +24,7 @@
     </div>
 </section>
 
-<section class="bg-gray-100 p-12">
+<section class="bg-gray-100 p-4 md:p-12">
     <div class="container mx-auto flex flex-col md:flex-row md:items-center">
         <div class="md:w-3/4 p-2">
             <h2 class="text-3xl text-primary font-semibold">So what does a Systatic site look like?</h2>
