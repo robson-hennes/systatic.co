@@ -68,18 +68,18 @@ a {
 */
 
 .intravert-space {
-    @apply flex-col justify-center items-center;
     display: flex!important;
+    @apply flex-col justify-center items-center;
 }
 
 .space-available {
     span.placeholder-text {
-        @apply text-2xl;
+        @apply text-2xl font-semibold;
     }
 }
 
 .booking-text {
-    @apply text-2xl;
+    @apply text-lg font-semibold;
 }
 
 /*
