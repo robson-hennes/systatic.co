@@ -38,6 +38,10 @@ return [
 			'target' => '/getting-started.html'
 		],
 		[
+			'name' => 'Customizing',
+			'target' => '/customizing.html'
+		],
+		[
 			'name' => 'Building',
 			'target' => '/building.html'
 		],

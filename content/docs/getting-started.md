@@ -5,7 +5,7 @@ documentation: true
 ---
 
 # System Requirements
-To use Systatic, you'll need PHP (minimum version 7.2) and Composer installed.
+To use Systatic, you'll need to have PHP 7.2+ and Composer installed.
 
 # Installation
 1. Create a new directory for your site and change into that directory.
@@ -34,7 +34,7 @@ php systatic build
 ```
 
 # Directory Structure
-Your site folder will now consist of a few different files and folders
+Your site folder will now consist of a few different files and folders. You can [change them](/customizing.html) if you want.
 
 * `content` - Where your markdown files go
 * `dist` - Where your outputed HTML files go
