@@ -3,7 +3,9 @@ node_modules
 vendor
 .DS_Store
 package-lock.json
+yarn.lock
 
-dist/mix-manifest.json
+mix-manifest.json
 dist/css/app.css
 dist/js/app.js
+dist/*.html
