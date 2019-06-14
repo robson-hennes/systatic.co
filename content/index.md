@@ -1,5 +1,6 @@
 ---
 title: Markdown is all you need!
+subheading: Simple, modern Static Site Generator, built in PHP
 view: home
 links:
 -

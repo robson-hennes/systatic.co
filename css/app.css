@@ -81,3 +81,11 @@ a {
 .booking-text {
     @apply text-2xl;
 }
+
+/*
+    Spans
+*/
+
+span {
+    @apply text-primary font-semibold;
+}
