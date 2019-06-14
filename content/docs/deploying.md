@@ -1,6 +1,7 @@
 ---
 title: Deploying
 view: docs
+documentation: true
 ---
 
 # Netlify (recommended)

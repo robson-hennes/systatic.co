@@ -1,6 +1,7 @@
 ---
 title: Content
 view: docs
+documentation: true
 ---
 
 By default, all content in your Systatic site is stored in the `content` directory. When you build your site, we will combine your content and views together to make static HTML files.
