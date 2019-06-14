@@ -89,3 +89,11 @@ a {
 span {
     @apply text-primary font-semibold;
 }
+
+/*
+    Lists
+*/
+
+ul {
+    @apply list-disc ml-8;
+}

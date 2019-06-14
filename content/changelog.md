@@ -2,4 +2,6 @@
 title: Changelog
 ---
 
-<changelog> </changelog>
+<changelog>
+    <p class="text-center">Loading changelog...</p>
+</changelog>
