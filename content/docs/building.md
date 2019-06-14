@@ -1,6 +1,7 @@
 ---
 title: Building
 view: docs
+documentation: true
 ---
 
 When you have made changes to your content or views then you'll need to rebuild your site.

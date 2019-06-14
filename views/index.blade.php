@@ -2,7 +2,8 @@
 
 @section('body')
 @include('partials.hero')
-<section class="container mx-auto">
+
+<section class="px-4 md:px-0 container mx-auto">
     {!! $content !!}
 </section>
 @endsection

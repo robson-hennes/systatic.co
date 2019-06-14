@@ -1,6 +1,7 @@
 ---
 title: Getting Started
 view: docs
+documentation: true
 ---
 
 # System Requirements

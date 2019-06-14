@@ -1,9 +1,16 @@
 <template>
     <div id="changelog">
-        <article v-for="release in releases" :key="release.id" :id="release.id" class="mb-6">
-            <h1>
-                <a class="text-4xl mb-2 no-underline text-primary" :href="'#' + release.id">{{ release.name }}</a>
-            </h1>
+        <article v-for="release in releases" :key="release.id" :id="release.id" class="pb-4 mb-2 border-b-2 border-gray-200">
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between">
+                <h1>
+                    <a class="text-4xl mb-2 no-underline text-primary" :href="'#' + release.id">
+                        {{ release.name }}
+                    </a>
+                </h1>
+                <h4 class="text-lg">
+                    {{ release.published_at | formatDate }}
+                </h4>
+            </div>
             <div>
                 <vue-markdown>{{ release.body }}</vue-markdown>
             </div>
@@ -14,6 +21,7 @@
 <script>
 import axios from 'axios'
 import VueMarkdown from 'vue-markdown'
+import moment from 'moment'
 
 export default {
     components: {

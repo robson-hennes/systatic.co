@@ -1,6 +1,7 @@
 ---
 title: Configuration
 view: docs
+documentation: true
 ---
 
 Configuration is simple! Every Systatic site has a `config.php` file which has settings required to build your site.

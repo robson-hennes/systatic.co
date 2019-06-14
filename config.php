@@ -11,46 +11,55 @@ return [
 	'nav' => [
 		[
 			'name' => 'Documentation',
-			'target' => '/docs'
+			'target' => '/docs.html'
 		],
 		[
 			'name' => 'Changelog',
-			'target' => '/changelog'
-		],
+			'target' => '/changelog.html'
+		]
+	],
+
+	'social' => [
 		[
 			'name' => 'Github',
-			'target' => 'https://github.com/damcclean/systatic'
+			'icon' => '/images/github.svg',
+			'link' => 'https://github.com/damcclean/systatic'
+		],
+		[
+			'name' => 'Discord',
+			'icon' => '/images/discord.svg',
+			'link' => 'https://discord.gg/sxkrycQ'
 		],
 	],
 
 	'docs' => [
 		[
 			'name' => 'Getting Started',
-			'target' => '/getting-started'
+			'target' => '/getting-started.html'
 		],
 		[
 			'name' => 'Building',
-			'target' => '/building'
+			'target' => '/building.html'
 		],
 		[
 			'name' => 'Deploying',
-			'target' => '/deploying'
+			'target' => '/deploying.html'
 		],
 		[
 			'name' => 'Configuration',
-			'target' => '/configuration'
+			'target' => '/configuration.html'
 		],
 		[
 			'name' => 'Content',
-			'target' => '/content'
+			'target' => '/content.html'
 		],
 		[
 			'name' => 'Templating',
-			'target' => '/templating'
+			'target' => '/templating.html'
 		],
 	],
 
 	'redirects' => [
-		'docs' => '/getting-started'
+		'docs' => '/getting-started.html'
 	]
 ];

@@ -1,6 +1,7 @@
 ---
 title: Templating
 view: docs
+documentation: true
 ---
 
 Systatic allows developers to create their views, templates, partials using Laravel Blade, the popular templating language used in the Laravel PHP framework.
