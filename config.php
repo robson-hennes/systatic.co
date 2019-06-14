@@ -16,10 +16,19 @@ return [
 		[
 			'name' => 'Changelog',
 			'target' => '/changelog'
-		],
+		]
+	],
+
+	'social' => [
 		[
 			'name' => 'Github',
-			'target' => 'https://github.com/damcclean/systatic'
+			'icon' => '/images/github.svg',
+			'link' => 'https://github.com/damcclean/systatic'
+		],
+		[
+			'name' => 'Discord',
+			'icon' => '/images/discord.svg',
+			'link' => 'https://discord.gg/sxkrycQ'
 		],
 	],
 
