@@ -11,11 +11,11 @@ return [
 	'nav' => [
 		[
 			'name' => 'Documentation',
-			'target' => '/docs'
+			'target' => '/docs.html'
 		],
 		[
 			'name' => 'Changelog',
-			'target' => '/changelog'
+			'target' => '/changelog.html'
 		]
 	],
 
@@ -35,31 +35,31 @@ return [
 	'docs' => [
 		[
 			'name' => 'Getting Started',
-			'target' => '/getting-started'
+			'target' => '/getting-started.html'
 		],
 		[
 			'name' => 'Building',
-			'target' => '/building'
+			'target' => '/building.html'
 		],
 		[
 			'name' => 'Deploying',
-			'target' => '/deploying'
+			'target' => '/deploying.html'
 		],
 		[
 			'name' => 'Configuration',
-			'target' => '/configuration'
+			'target' => '/configuration.html'
 		],
 		[
 			'name' => 'Content',
-			'target' => '/content'
+			'target' => '/content.html'
 		],
 		[
 			'name' => 'Templating',
-			'target' => '/templating'
+			'target' => '/templating.html'
 		],
 	],
 
 	'redirects' => [
-		'docs' => '/getting-started'
+		'docs' => '/getting-started.html'
 	]
 ];
