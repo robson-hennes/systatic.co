@@ -47,5 +47,5 @@ Just like in Laravel apps, you can also pass information into your partials.
 ```
 Within your partials, you can reference the information using variables.
 ```
-<p>It's the year {{ $year }}, and you can email me at {{ $email }}.</p>
+<p>{{ $copyright }} - You can contact me at {{ $email }}</p>
 ```
