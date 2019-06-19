@@ -43,7 +43,7 @@ Partials are parts of reusable code that can be included in different places acr
 ## Passing information into partials
 Just like in Laravel apps, you can also pass information into your partials.
 ```
-@include('partials.footer', ['email' => 'hi@example.com', 'year' => '2019'])
+@include('partials.footer', ['email' => 'hi@example.com', 'copyright' => 'Copyright 2019'])
 ```
 Within your partials, you can reference the information using variables.
 ```
