@@ -35,6 +35,26 @@ Let's go through what each of the things mean,
 
 You can also add the `view` property to that array to specify a default view that should be used, like `post` or `event`.
 
+### Don't build pages for collection
+
+Say you have a Collection for Events but you don't want to actually build HTML files for the entries in the collection, you just need them for an 'Events' page. Then you can disable them from building by specifying the `build` attribute on a collection.
+
+```php
+...
+
+'collections' => [
+    'events' => [
+        'name' => 'Events',
+        'permalink' => '/',
+        'location' => './content/events',
+        'build' => false
+    ]
+],
+...
+```
+
+> Even though it's not being built, you still need to provide a `permalink` attribute for the collection. You could just leave it empty, but it needs to exist.
+
 ## Search
 Systatic has search functionality, but it comes with a bit of a downside, you have to use [Algolia](https://www.algolia.com/). 
 

@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7d1bcf9f-b7fe-4010-8872-ccd4b7373d39" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/content/docs/collections.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/docs/collections.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/dist/" />
@@ -23,8 +24,8 @@
         <entry file="file://$PROJECT_DIR$/content/docs/collections.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="537">
-                <caret line="101" column="27" selection-start-line="101" selection-start-column="27" selection-end-line="101" selection-end-column="27" />
+              <first_editor relative-caret-position="504">
+                <caret line="49" column="24" selection-start-line="49" selection-start-column="24" selection-end-line="49" selection-end-column="24" />
               </first_editor>
               <second_editor />
             </state>
@@ -193,12 +194,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1562922834147</updated>
-      <workItem from="1562922837044" duration="10045000" />
+      <workItem from="1562922837044" duration="10748000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10045000" />
+    <option name="totallyTimeSpent" value="10748000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
@@ -535,8 +536,8 @@
     <entry file="file://$PROJECT_DIR$/content/docs/collections.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="537">
-            <caret line="101" column="27" selection-start-line="101" selection-start-column="27" selection-end-line="101" selection-end-column="27" />
+          <first_editor relative-caret-position="504">
+            <caret line="49" column="24" selection-start-line="49" selection-start-column="24" selection-end-line="49" selection-end-column="24" />
           </first_editor>
           <second_editor />
         </state>
