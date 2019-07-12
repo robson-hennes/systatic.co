@@ -64,4 +64,39 @@ You'll also want to add the `searchable` property to any collection you want to 
 Now, every time you build your site, Algolia will index your collections.
 
 ## Remote Collections
-This is still to be written about..... If you want to write docs for it, **just do it**!
+Remote Collections are like normal collections but instead of the content being inside Markdown files they are somewhere else, like in a Headless CMS.
+
+We've built Remote Collections in a way that's flexible to give you the ultimate control of how you fetch your data and return that (literally) to Systatic.
+
+Instead of specifying a `location` attribute on your collection config, you can specify a `remote` attribute with a function inside. Like so:
+
+```php
+<?php
+
+return [
+    ...
+    
+    'collections' => [
+        'blog' => [
+            'name' => 'Blog',
+            'permalink' => '/blog/',
+            'remote' => function() {
+                $posts = json_decode(file_get_contents('https://api.cms.blog/api/posts'), true);
+                
+                return collect($posts)->map(function ($post) {
+                    'title' => $post['title'],
+                    'slug' => $post['slug'],
+                    'content' => $post['content']
+                });
+            }
+        ]
+    ]
+    ...
+]
+```
+
+We really don't care how you fetch the content, just as long as you return at least an array with a `title`, `slug` and `content` each, then we're good!
+
+> We're using the `file_get_contents` method in our example, but you could pull in something like Guzzle or Zttp to do it instead - you would need to do that if your API is behind authentication.
+
+Then you'll be able to reference the collection like all other collections inside your views.
