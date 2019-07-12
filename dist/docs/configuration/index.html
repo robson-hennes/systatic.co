@@ -144,7 +144,12 @@ $config = './new-config-filename.php';
 ....</code></pre>
 <h2>Environment settings</h2>
 <p>Sometimes you need to keep things like API keys and stuff out of Git or things that are different between environments. That's why we use <code>.env</code> files.</p>
-<p>Just create an <code>.env</code> file and plop in anything you want, then use them however you want.</p>
+<p>All you need to do is create a <code>.env</code> file and you can put in it whatever values you want.</p>
+<pre><code>STRIPE_SECRET=......</code></pre>
+<p>You can reference it in your templates, like any other configuration value:</p>
+<pre><code class="language-php">{{ $config-&gt;STRIPE_SECRET }}</code></pre>
+<h3>Env fallbacks</h3>
+<p>If a value does not exist in the <code>config.php</code> file, it will fallback to an environment file. For example, if the <code>name</code> config value does not exist in the config file, it will fallback to the <code>NAME</code> value.</p>
     </div>
 </div>
 

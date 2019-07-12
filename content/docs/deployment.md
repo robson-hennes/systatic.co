@@ -19,8 +19,6 @@ Here are the services we currently support:
 * Netlify
 * Heroku
 * Github Pages
-* Amazon S3
-* SFTP
 
 To get started, just run:
 
