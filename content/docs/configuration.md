@@ -1,32 +1,80 @@
 ---
 title: Configuration
-view: docs
 documentation: true
+order: 3
 ---
 
-Configuration is simple! Every Systatic site has a `config.php` file which has settings required to build your site.
+# Configuration
+Systatic has configuration nailed! (at least we think so)
 
-Your `config.php` will look like this:
-```
+## Config file
+Every site has a `config.php` file. It's the main place for configuration in Systatic.
+
+A plain `config.php` file looks a bit like this:
+
+```php
 <?php
 
 return [
-	'siteName' => 'Awesome Website',
-	'siteUrl' => '/',
-	'outputDir' => './tests/site/dist',
-	'contentDir' => './tests/site/content',
-	'viewsDir' => './tests/site/views',
-	'storageDir' => './tests/site/storage'
+	'name' => 'Systatic',
+	'env' => 'local',
+	'url' => 'http://localhost:8080',
+	
+	'locations' => [
+		'output' => './dist',
+		'views' => './views',
+		'storage' => './storage'
+	],
+	
+	'collections' => [
+		'pages' => [
+			'name' => 'Pages',
+	    'permalink' => '/',
+	    'location' => './content/pages'
+		]
+	]
 ];
 ```
-## Settings
-* `siteName` - **Required** Site name
-* `siteUrl` - **Required** Base URL of your site. You can leave it as `/` or provide a full URL like `https://example.com/`. Make sure to include the ending slash.
-* `outputDir` - **Required** Where you want your HTML files to go. You should have your web server serve files from here.
-* `contentDir` - **Required** Where your Markdown files live
-* `viewsDir` - **Required** Where your Laravel Blade views live
-* `storageDir` - **Required** Where you want all of the Systatic storage files to live.
-* `redirects` - An array of redirects, [read more](https://github.com/damcclean/Systatic/wiki/Redirects).
 
-# Env Variables
-If you have things like API keys or variables you would like to keep out of version control of different on each env then you can use `.env` files. 
+Most of the file is pretty self explanatory.
+
+The `location` array has the directory paths for your output, views and your storage.
+
+The `collections` array sets down the collections you want to use within your Systatic site. You can read more about collections configuration [here](#).
+
+### Changing the name of the config file
+If you don't like the name of the config file, you can change that.
+
+Open up your `systatic` file and change the value of the `$config` variable.
+
+```php
+<?php
+
+/*
+    Path to Config
+    - A relative path to where your config file is located.
+*/
+
+$config = './new-config-filename.php';
+
+....
+```
+
+## Environment settings
+Sometimes you need to keep things like API keys and stuff out of Git or things that are different between environments. That's why we use `.env` files.
+
+All you need to do is create a `.env` file and you can put in it whatever values you want.
+
+```
+STRIPE_SECRET=......
+```
+
+You can reference it in your templates, like any other configuration value:
+
+```php
+{{ $config->STRIPE_SECRET }}
+```
+
+### Env fallbacks
+
+If a value does not exist in the `config.php` file, it will fallback to an environment file. For example, if the `name` config value does not exist in the config file, it will fallback to the `NAME` value.

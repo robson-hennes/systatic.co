@@ -1,0 +1,156 @@
+<!doctype html>
+<html>
+<head>
+    <link rel="stylesheet" href="/css/app.css">
+
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script> window.siteId = '5d13ccd10c5bb'; </script> <script src="https://bob.iamlittle.co.uk/tracker.js"></script>    <!-- Primary Meta Tags -->
+    <title>Collections | Systatic</title>
+
+<meta name="title" content="Systatic - Simple, Modern Static Site Generator built in PHP">
+<meta name="description" content="Systatic is a Simple and Modern Static Site Generator built in PHP. Put Markdown files in, get HTML files out.">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://systatic.netlify.com/">
+<meta property="og:title" content="Systatic - Simple, Modern Static Site Generator built in PHP">
+<meta property="og:description" content="Systatic is a Simple and Modern Static Site Generator built in PHP. Put Markdown files in, get HTML files out.">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://systatic.netlify.com/">
+<meta property="twitter:title" content="Systatic - Simple, Modern Static Site Generator built in PHP">
+<meta property="twitter:description" content="Systatic is a Simple and Modern Static Site Generator built in PHP. Put Markdown files in, get HTML files out."></head>
+<body class="text-gray-700 bg-white leading-loose font-normal text-base">
+    <div id="app">
+        <div class="border-4 md:border-2 border-primary"></div>
+
+<header class="p-4">
+    <div class="px-12 flex flex-col md:flex-row md:items-center md:justify-between">
+        <a class="text-3xl md:text-2xl font-semibold text-center md:text-left" href="/">
+            Systatic
+        </a>
+
+        <nav class="flex flex-col md:flex-row md:items-center mt-4 md:mt-0">
+                            <a class="text-lg font-semibold mx-2 text-center" href="/docs/installation">
+                    Documentation
+                </a>
+                            <a class="text-lg font-semibold mx-2 text-center" href="/changelog">
+                    Changelog
+                </a>
+                    </nav>
+
+        <nav class="flex flex-row md:items-center justify-center mt-4 md:mt-0">
+                            <a class="mx-2" href="https://github.com/damcclean/systatic">
+                    <img src="/images/github.svg" alt="Github" width="25px">
+                </a>
+                            <a class="mx-2" href="https://discord.gg/sxkrycQ">
+                    <img src="/images/discord.svg" alt="Discord" width="25px">
+                </a>
+                    </nav>
+    </div>
+</header>        <section class="bg-primary  p-2  mb-6">
+    <div class="container mx-auto text-center text-white font-bold">
+        <h1 class="text-6xl">Collections</h1>
+
+            </div>
+</section>
+<div class="md:w-2/3 md:mx-auto flex flex-col md:flex-row">
+    <div class="md:w-1/4">
+        <div class="flex flex-col">
+                            <a class="text-primary p-2" href="/docs/building/index.html">
+                    Building
+                </a>
+                            <a class="text-primary p-2" href="/docs/collections/index.html">
+                    Collections
+                </a>
+                            <a class="text-primary p-2" href="/docs/common-issues/index.html">
+                    Common Issues
+                </a>
+                            <a class="text-primary p-2" href="/docs/configuration/index.html">
+                    Configuration
+                </a>
+                            <a class="text-primary p-2" href="/docs/content/index.html">
+                    Content
+                </a>
+                            <a class="text-primary p-2" href="/docs/deployment/index.html">
+                    Deployment
+                </a>
+                            <a class="text-primary p-2" href="/docs/importer/index.html">
+                    Importer
+                </a>
+                            <a class="text-primary p-2" href="/docs/installation/index.html">
+                    Installation
+                </a>
+                            <a class="text-primary p-2" href="/docs/plugins/index.html">
+                    Plugins
+                </a>
+                            <a class="text-primary p-2" href="/docs/redirects/index.html">
+                    Redirects
+                </a>
+                            <a class="text-primary p-2" href="/docs/templating/index.html">
+                    Templating
+                </a>
+                            <a class="text-primary p-2" href="/docs/updating/index.html">
+                    Updating
+                </a>
+                    </div>
+    </div>
+    <div class="md:w-3/4 px-4 md:px-0">
+        <h1>Collections</h1>
+<p>Collections is the new system to deal with content in Systatic.</p>
+<p>Previously in v1, everything was a page. This didn't work out well for sites that had different types of content. Like sites that wanted to have normal pages, a blog, events and documentation.</p>
+<p>Now with Collections, each of those things would be in their own Collection.</p>
+<p>You can configure Collections inside your <code>config.php</code> file, like you can read about below.</p>
+<h2>Configuration</h2>
+<p>When you install Systatic, your configuration file will automatically have a pages collection.</p>
+<p>To add a new collection to your site, just add an item to the <code>collections</code> array.</p>
+<p>The item should look like this:</p>
+<pre><code class="language-php">'Pages' =&gt; [
+            'name' =&gt; 'Pages',
+            'permalink' =&gt; '/',
+            'location' =&gt; './content/pages'
+],</code></pre>
+<p>Let's go through what each of the things mean,</p>
+<ul>
+<li><code>name</code> - The name of the array, it's not really used much</li>
+<li><code>permalink</code> - The link structure that is used. For example, if you had a blog, you could use <code>/blog/</code>.</li>
+<li><code>location</code> - The path to where your Markdown content files live.</li>
+</ul>
+<p>You can also add the <code>view</code> property to that array to specify a default view that should be used, like <code>post</code> or <code>event</code>.</p>
+<h2>Search</h2>
+<p>Systatic has search functionality, but it comes with a bit of a downside, you have to use <a href="https://www.algolia.com/">Algolia</a>. </p>
+<p>Algolia is a super-fast search-as-a-service business. They have a free community plan that can be used on small non-commercial sites and as long as you display their logo.</p>
+<p>To configure Algolia search, just add this to your <code>config.php</code> file.</p>
+<pre><code class="language-php">'algolia' =&gt; [
+        'app_id' =&gt; '*******',
+        'api_key' =&gt; '*********',
+        'index' =&gt; 'prod_whatever'
+],</code></pre>
+<p>You'll also want to add the <code>searchable</code> property to any collection you want to have indexed by Algolia.</p>
+<pre><code class="language-php">'blog' =&gt; [
+            'name' =&gt; 'Blog',
+            'permalink' =&gt; '/blog/',
+            'location' =&gt; './content/blog',
+            'searchable' =&gt; true
+],</code></pre>
+<p>Now, every time you build your site, Algolia will index your collections.</p>
+<h2>Remote Collections</h2>
+<p>This is still to be written about..... If you want to write docs for it, <strong>just do it</strong>!</p>
+    </div>
+</div>
+
+        <footer class="bg-gray-300 p-6 mt-12">
+    <div class="container mx-auto flex flex-col md:flex-row md:items-center md:justify-between">
+        <p>Systatic is an open-source project, started by <a class="font-semibold" href="http://duncan.mcclean.co.uk">Duncan McClean</a>.</p>
+        <div class="intravert-space" id="space-334a34aec678"></div>
+    </div>
+</footer>    </div>
+
+    <script src="/js/app.js"></script>
+    <script defer src="https://intravert.co/serve/334a34aec6.78.js"></script>
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!doctype html>
+<html>
+<head>
+    <link rel="stylesheet" href="/css/app.css">
+
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script> window.siteId = '5d13ccd10c5bb'; </script> <script src="https://bob.iamlittle.co.uk/tracker.js"></script>    <!-- Primary Meta Tags -->
+    <title>Configuration | Systatic</title>
+
+<meta name="title" content="Systatic - Simple, Modern Static Site Generator built in PHP">
+<meta name="description" content="Systatic is a Simple and Modern Static Site Generator built in PHP. Put Markdown files in, get HTML files out.">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://systatic.netlify.com/">
+<meta property="og:title" content="Systatic - Simple, Modern Static Site Generator built in PHP">
+<meta property="og:description" content="Systatic is a Simple and Modern Static Site Generator built in PHP. Put Markdown files in, get HTML files out.">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://systatic.netlify.com/">
+<meta property="twitter:title" content="Systatic - Simple, Modern Static Site Generator built in PHP">
+<meta property="twitter:description" content="Systatic is a Simple and Modern Static Site Generator built in PHP. Put Markdown files in, get HTML files out."></head>
+<body class="text-gray-700 bg-white leading-loose font-normal text-base">
+    <div id="app">
+        <div class="border-4 md:border-2 border-primary"></div>
+
+<header class="p-4">
+    <div class="px-12 flex flex-col md:flex-row md:items-center md:justify-between">
+        <a class="text-3xl md:text-2xl font-semibold text-center md:text-left" href="/">
+            Systatic
+        </a>
+
+        <nav class="flex flex-col md:flex-row md:items-center mt-4 md:mt-0">
+                            <a class="text-lg font-semibold mx-2 text-center" href="/docs/installation">
+                    Documentation
+                </a>
+                            <a class="text-lg font-semibold mx-2 text-center" href="/changelog">
+                    Changelog
+                </a>
+                    </nav>
+
+        <nav class="flex flex-row md:items-center justify-center mt-4 md:mt-0">
+                            <a class="mx-2" href="https://github.com/damcclean/systatic">
+                    <img src="/images/github.svg" alt="Github" width="25px">
+                </a>
+                            <a class="mx-2" href="https://discord.gg/sxkrycQ">
+                    <img src="/images/discord.svg" alt="Discord" width="25px">
+                </a>
+                    </nav>
+    </div>
+</header>        <section class="bg-primary  p-2  mb-6">
+    <div class="container mx-auto text-center text-white font-bold">
+        <h1 class="text-6xl">Configuration</h1>
+
+            </div>
+</section>
+<div class="md:w-2/3 md:mx-auto flex flex-col md:flex-row">
+    <div class="md:w-1/4">
+        <div class="flex flex-col">
+                            <a class="text-primary p-2" href="/docs/building/index.html">
+                    Building
+                </a>
+                            <a class="text-primary p-2" href="/docs/collections/index.html">
+                    Collections
+                </a>
+                            <a class="text-primary p-2" href="/docs/common-issues/index.html">
+                    Common Issues
+                </a>
+                            <a class="text-primary p-2" href="/docs/configuration/index.html">
+                    Configuration
+                </a>
+                            <a class="text-primary p-2" href="/docs/content/index.html">
+                    Content
+                </a>
+                            <a class="text-primary p-2" href="/docs/deployment/index.html">
+                    Deployment
+                </a>
+                            <a class="text-primary p-2" href="/docs/importer/index.html">
+                    Importer
+                </a>
+                            <a class="text-primary p-2" href="/docs/installation/index.html">
+                    Installation
+                </a>
+                            <a class="text-primary p-2" href="/docs/plugins/index.html">
+                    Plugins
+                </a>
+                            <a class="text-primary p-2" href="/docs/redirects/index.html">
+                    Redirects
+                </a>
+                            <a class="text-primary p-2" href="/docs/templating/index.html">
+                    Templating
+                </a>
+                            <a class="text-primary p-2" href="/docs/updating/index.html">
+                    Updating
+                </a>
+                    </div>
+    </div>
+    <div class="md:w-3/4 px-4 md:px-0">
+        <h1>Configuration</h1>
+<p>Systatic has configuration nailed! (at least we think so)</p>
+<h2>Config file</h2>
+<p>Every site has a <code>config.php</code> file. It's the main place for configuration in Systatic.</p>
+<p>A plain <code>config.php</code> file looks a bit like this:</p>
+<pre><code class="language-php">&lt;?php
+
+return [
+    'name' =&gt; 'Systatic',
+    'env' =&gt; 'local',
+    'url' =&gt; 'http://localhost:8080',
+
+    'locations' =&gt; [
+        'output' =&gt; './dist',
+        'views' =&gt; './views',
+        'storage' =&gt; './storage'
+    ],
+
+    'collections' =&gt; [
+        'pages' =&gt; [
+            'name' =&gt; 'Pages',
+        'permalink' =&gt; '/',
+        'location' =&gt; './content/pages'
+        ]
+    ]
+];</code></pre>
+<p>Most of the file is pretty self explanatory.</p>
+<p>The <code>location</code> array has the directory paths for your output, views and your storage.</p>
+<p>The <code>collections</code> array sets down the collections you want to use within your Systatic site. You can read more about collections configuration <a href="#">here</a>.</p>
+<h3>Changing the name of the config file</h3>
+<p>If you don't like the name of the config file, you can change that.</p>
+<p>Open up your <code>systatic</code> file and change the value of the <code>$config</code> variable.</p>
+<pre><code class="language-php">&lt;?php
+
+/*
+    Path to Config
+    - A relative path to where your config file is located.
+*/
+
+$config = './new-config-filename.php';
+
+....</code></pre>
+<h2>Environment settings</h2>
+<p>Sometimes you need to keep things like API keys and stuff out of Git or things that are different between environments. That's why we use <code>.env</code> files.</p>
+<p>Just create an <code>.env</code> file and plop in anything you want, then use them however you want.</p>
+    </div>
+</div>
+
+        <footer class="bg-gray-300 p-6 mt-12">
+    <div class="container mx-auto flex flex-col md:flex-row md:items-center md:justify-between">
+        <p>Systatic is an open-source project, started by <a class="font-semibold" href="http://duncan.mcclean.co.uk">Duncan McClean</a>.</p>
+        <div class="intravert-space" id="space-334a34aec678"></div>
+    </div>
+</footer>    </div>
+
+    <script src="/js/app.js"></script>
+    <script defer src="https://intravert.co/serve/334a34aec6.78.js"></script>
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!doctype html>
+<html>
+<head>
+    <link rel="stylesheet" href="/css/app.css">
+
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script> window.siteId = '5d13ccd10c5bb'; </script> <script src="https://bob.iamlittle.co.uk/tracker.js"></script>    <!-- Primary Meta Tags -->
+    <title>Importer | Systatic</title>
+
+<meta name="title" content="Systatic - Simple, Modern Static Site Generator built in PHP">
+<meta name="description" content="Systatic is a Simple and Modern Static Site Generator built in PHP. Put Markdown files in, get HTML files out.">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://systatic.netlify.com/">
+<meta property="og:title" content="Systatic - Simple, Modern Static Site Generator built in PHP">
+<meta property="og:description" content="Systatic is a Simple and Modern Static Site Generator built in PHP. Put Markdown files in, get HTML files out.">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://systatic.netlify.com/">
+<meta property="twitter:title" content="Systatic - Simple, Modern Static Site Generator built in PHP">
+<meta property="twitter:description" content="Systatic is a Simple and Modern Static Site Generator built in PHP. Put Markdown files in, get HTML files out."></head>
+<body class="text-gray-700 bg-white leading-loose font-normal text-base">
+    <div id="app">
+        <div class="border-4 md:border-2 border-primary"></div>
+
+<header class="p-4">
+    <div class="px-12 flex flex-col md:flex-row md:items-center md:justify-between">
+        <a class="text-3xl md:text-2xl font-semibold text-center md:text-left" href="/">
+            Systatic
+        </a>
+
+        <nav class="flex flex-col md:flex-row md:items-center mt-4 md:mt-0">
+                            <a class="text-lg font-semibold mx-2 text-center" href="/docs/installation">
+                    Documentation
+                </a>
+                            <a class="text-lg font-semibold mx-2 text-center" href="/changelog">
+                    Changelog
+                </a>
+                    </nav>
+
+        <nav class="flex flex-row md:items-center justify-center mt-4 md:mt-0">
+                            <a class="mx-2" href="https://github.com/damcclean/systatic">
+                    <img src="/images/github.svg" alt="Github" width="25px">
+                </a>
+                            <a class="mx-2" href="https://discord.gg/sxkrycQ">
+                    <img src="/images/discord.svg" alt="Discord" width="25px">
+                </a>
+                    </nav>
+    </div>
+</header>        <section class="bg-primary  p-2  mb-6">
+    <div class="container mx-auto text-center text-white font-bold">
+        <h1 class="text-6xl">Importer</h1>
+
+            </div>
+</section>
+<div class="md:w-2/3 md:mx-auto flex flex-col md:flex-row">
+    <div class="md:w-1/4">
+        <div class="flex flex-col">
+                            <a class="text-primary p-2" href="/docs/building/index.html">
+                    Building
+                </a>
+                            <a class="text-primary p-2" href="/docs/collections/index.html">
+                    Collections
+                </a>
+                            <a class="text-primary p-2" href="/docs/common-issues/index.html">
+                    Common Issues
+                </a>
+                            <a class="text-primary p-2" href="/docs/configuration/index.html">
+                    Configuration
+                </a>
+                            <a class="text-primary p-2" href="/docs/content/index.html">
+                    Content
+                </a>
+                            <a class="text-primary p-2" href="/docs/deployment/index.html">
+                    Deployment
+                </a>
+                            <a class="text-primary p-2" href="/docs/importer/index.html">
+                    Importer
+                </a>
+                            <a class="text-primary p-2" href="/docs/installation/index.html">
+                    Installation
+                </a>
+                            <a class="text-primary p-2" href="/docs/plugins/index.html">
+                    Plugins
+                </a>
+                            <a class="text-primary p-2" href="/docs/redirects/index.html">
+                    Redirects
+                </a>
+                            <a class="text-primary p-2" href="/docs/templating/index.html">
+                    Templating
+                </a>
+                            <a class="text-primary p-2" href="/docs/updating/index.html">
+                    Updating
+                </a>
+                    </div>
+    </div>
+    <div class="md:w-3/4 px-4 md:px-0">
+        <h1>Importer</h1>
+<p>Systatic has a few importer to make it easy to import your content from other static site generators or CMS's.</p>
+<h2>WordPress</h2>
+<p>To use the WordPress importer, run this command:</p>
+<pre><code>php systatic import:wordpress</code></pre>
+<p>It'll prompt for your WordPress site URL and it'll bring in your posts and pages using the REST API.</p>
+<p>However, please note:</p>
+<ul>
+<li>We can't bring in custom post types right now using the importer because it's a bit complicated.</li>
+<li>Some security plugins lock down the WordPress REST API to require authentication, in those cases the importer would not work.</li>
+</ul>
+<h2>Jekyll</h2>
+<p>Before using the Jekyll importer, copy your entire Jekyll directory into a folder in your Systatic install. Then run:</p>
+<pre><code>php systatic import:jekyll</code></pre>
+<p>It'll prompt you for the name of the directory where you put your Jekyll site. Just enter that.</p>
+<p>Our importer will find all the posts and any other content on your site and will set it up for you in Systatic.</p>
+<h2>Ghost</h2>
+<p>There are a few steps to do before you can import from your Ghost site.</p>
+<p>The first thing is that you'll need to login to your Ghost site, go to your Integrations page. You'll want to create a custom integration. </p>
+<p>Once created, it will give you a Content API key, keep that for now. Then run:</p>
+<pre><code>php systatic import:ghost</code></pre>
+<p>You'll be prompted for the URL of your Ghost site and you'll need to provide the Content API key.</p>
+<p>Then Systatic will import your settings, posts and pages from Ghost.</p>
+<h2>Custom Importers</h2>
+<p>If you want to create your own importer, you can do so either using a custom script or you can build one as a Plugin by registering a command.</p>
+    </div>
+</div>
+
+        <footer class="bg-gray-300 p-6 mt-12">
+    <div class="container mx-auto flex flex-col md:flex-row md:items-center md:justify-between">
+        <p>Systatic is an open-source project, started by <a class="font-semibold" href="http://duncan.mcclean.co.uk">Duncan McClean</a>.</p>
+        <div class="intravert-space" id="space-334a34aec678"></div>
+    </div>
+</footer>    </div>
+
+    <script src="/js/app.js"></script>
+    <script defer src="https://intravert.co/serve/334a34aec6.78.js"></script>
+</body>
+</html>

@@ -1,69 +1,59 @@
 <?php
 
 return [
-	'siteName' => 'Systatic',
-	'siteUrl' => '/',
-	'outputDir' => './dist',
-	'contentDir' => './content',
-	'viewsDir' => './views',
-	'storageDir' => './storage',
+    'name' => 'Systatic',
+    'url' => 'https://systatic.netlify.com',
 
-	'nav' => [
-		[
-			'name' => 'Documentation',
-			'target' => '/docs.html'
-		],
-		[
-			'name' => 'Changelog',
-			'target' => '/changelog.html'
-		]
-	],
+    'locations' => [
+        'output' => './dist',
+        'views' => './views',
+        'storage' => './storage'
+    ],
 
-	'social' => [
-		[
-			'name' => 'Github',
-			'icon' => '/images/github.svg',
-			'link' => 'https://github.com/damcclean/systatic'
-		],
-		[
-			'name' => 'Discord',
-			'icon' => '/images/discord.svg',
-			'link' => 'https://discord.gg/sxkrycQ'
-		],
-	],
+    'collections' => [
+        'pages' => [
+            'name' => 'Pages',
+            'permalink' => '/',
+            'location' => './content/pages'
+        ],
 
-	'docs' => [
-		[
-			'name' => 'Getting Started',
-			'target' => '/getting-started.html'
-		],
-		[
-			'name' => 'Customizing',
-			'target' => '/customizing.html'
-		],
-		[
-			'name' => 'Building',
-			'target' => '/building.html'
-		],
-		[
-			'name' => 'Deploying',
-			'target' => '/deploying.html'
-		],
-		[
-			'name' => 'Configuration',
-			'target' => '/configuration.html'
-		],
-		[
-			'name' => 'Content',
-			'target' => '/content.html'
-		],
-		[
-			'name' => 'Templating',
-			'target' => '/templating.html'
-		],
-	],
+        'docs' => [
+            'name' => 'Documentation',
+            'permalink' => '/docs/',
+            'location' => './content/docs',
+            'view' => 'docs',
+//            'searchable' => true
+        ]
+    ],
 
-	'redirects' => [
-		'docs' => '/getting-started.html'
-	]
+    'nav' => [
+        [
+            'name' => 'Documentation',
+            'target' => '/docs/installation'
+        ],
+        [
+            'name' => 'Changelog',
+            'target' => '/changelog'
+        ]
+    ],
+
+    'social' => [
+        [
+            'name' => 'Github',
+            'icon' => '/images/github.svg',
+            'link' => 'https://github.com/damcclean/systatic'
+        ],
+        [
+            'name' => 'Discord',
+            'icon' => '/images/discord.svg',
+            'link' => 'https://discord.gg/sxkrycQ'
+        ],
+    ],
+
+    'redirects' => [
+        [
+            'slug' => 'docs',
+            'target' => '/docs/installation'
+        ]
+    ]
 ];
