@@ -110,12 +110,6 @@ return [
 ];
 ```
 
-## Templating languages
-WIP...
-
-## Views
-WIP...
-
 ## Available APIs
 Plugins have access to all the same APIs as Systatic does. This means you can do things like reading from collections or getting configuration values.
 
