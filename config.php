@@ -2,7 +2,7 @@
 
 return [
     'name' => 'Systatic',
-    'url' => 'https://systatic.netlify.com',
+    'url' => 'https://systatic.co',
 
     'locations' => [
         'output' => './dist',
@@ -46,7 +46,7 @@ return [
         [
             'name' => 'Discord',
             'icon' => '/images/discord.svg',
-            'link' => 'https://discord.gg/sxkrycQ'
+            'link' => 'https://discord.gg/zSg3MHv'
         ],
     ],
 

@@ -28,17 +28,17 @@
     <div id="app">
         <div class="border-4 md:border-2 border-primary"></div>
 
-<header class="p-4">
+<header class="p-2 bg-gray-100">
     <div class="px-12 flex flex-col md:flex-row md:items-center md:justify-between">
-        <a class="text-3xl md:text-2xl font-semibold text-center md:text-left" href="/">
+        <a class="text-3xl md:text-2xl font-semibold text-center md:text-left hover:text-secondary" href="/">
             Systatic
         </a>
 
         <nav class="flex flex-col md:flex-row md:items-center mt-4 md:mt-0">
-                            <a class="text-lg font-semibold mx-2 text-center" href="/docs/installation">
+                            <a class="text-lg font-semibold mx-2 text-center hover:text-secondary" href="/docs/installation">
                     Documentation
                 </a>
-                            <a class="text-lg font-semibold mx-2 text-center" href="/changelog">
+                            <a class="text-lg font-semibold mx-2 text-center hover:text-secondary" href="/changelog">
                     Changelog
                 </a>
                     </nav>
@@ -47,16 +47,15 @@
                             <a class="mx-2" href="https://github.com/damcclean/systatic">
                     <img src="/images/github.svg" alt="Github" width="25px">
                 </a>
-                            <a class="mx-2" href="https://discord.gg/sxkrycQ">
+                            <a class="mx-2" href="https://discord.gg/zSg3MHv">
                     <img src="/images/discord.svg" alt="Discord" width="25px">
                 </a>
                     </nav>
     </div>
-</header>        <section class="bg-primary  p-2  mb-6">
+</header>        <section class="bg-primary p-12 mb-6">
     <div class="container mx-auto text-center text-white font-bold">
-        <h1 class="text-6xl">Collections</h1>
-
-            </div>
+        <h1 class="text-5xl ">Collections</h1>
+    </div>
 </section>
 <div class="md:w-2/3 md:mx-auto flex flex-col md:flex-row">
     <div class="md:w-1/4">
@@ -121,6 +120,22 @@
 <li><code>location</code> - The path to where your Markdown content files live.</li>
 </ul>
 <p>You can also add the <code>view</code> property to that array to specify a default view that should be used, like <code>post</code> or <code>event</code>.</p>
+<h3>Don't build pages for collection</h3>
+<p>Say you have a Collection for Events but you don't want to actually build HTML files for the entries in the collection, you just need them for an 'Events' page. Then you can disable them from building by specifying the <code>build</code> attribute on a collection.</p>
+<pre><code class="language-php">...
+
+'collections' =&gt; [
+    'events' =&gt; [
+        'name' =&gt; 'Events',
+        'permalink' =&gt; '/',
+        'location' =&gt; './content/events',
+        'build' =&gt; false
+    ]
+],
+...</code></pre>
+<blockquote>
+<p>Even though it's not being built, you still need to provide a <code>permalink</code> attribute for the collection. You could just leave it empty, but it needs to exist.</p>
+</blockquote>
 <h2>Search</h2>
 <p>Systatic has search functionality, but it comes with a bit of a downside, you have to use <a href="https://www.algolia.com/">Algolia</a>. </p>
 <p>Algolia is a super-fast search-as-a-service business. They have a free community plan that can be used on small non-commercial sites and as long as you display their logo.</p>
@@ -139,7 +154,36 @@
 ],</code></pre>
 <p>Now, every time you build your site, Algolia will index your collections.</p>
 <h2>Remote Collections</h2>
-<p>This is still to be written about..... If you want to write docs for it, <strong>just do it</strong>!</p>
+<p>Remote Collections are like normal collections but instead of the content being inside Markdown files they are somewhere else, like in a Headless CMS.</p>
+<p>We've built Remote Collections in a way that's flexible to give you the ultimate control of how you fetch your data and return that (literally) to Systatic.</p>
+<p>Instead of specifying a <code>location</code> attribute on your collection config, you can specify a <code>remote</code> attribute with a function inside. Like so:</p>
+<pre><code class="language-php">&lt;?php
+
+return [
+    ...
+
+    'collections' =&gt; [
+        'blog' =&gt; [
+            'name' =&gt; 'Blog',
+            'permalink' =&gt; '/blog/',
+            'remote' =&gt; function() {
+                $posts = json_decode(file_get_contents('https://api.cms.blog/api/posts'), true);
+
+                return collect($posts)-&gt;map(function ($post) {
+                    'title' =&gt; $post['title'],
+                    'slug' =&gt; $post['slug'],
+                    'content' =&gt; $post['content']
+                });
+            }
+        ]
+    ]
+    ...
+]</code></pre>
+<p>We really don't care how you fetch the content, just as long as you return at least an array with a <code>title</code>, <code>slug</code> and <code>content</code> each, then we're good!</p>
+<blockquote>
+<p>We're using the <code>file_get_contents</code> method in our example, but you could pull in something like Guzzle or Zttp to do it instead - you would need to do that if your API is behind authentication.</p>
+</blockquote>
+<p>Then you'll be able to reference the collection like all other collections inside your views.</p>
     </div>
 </div>
 
