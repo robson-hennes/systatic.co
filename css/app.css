@@ -67,23 +67,8 @@ a {
     @apply text-primary;
 }
 
-/*
-    Footer
-*/
-
-.intravert-space {
-    display: flex!important;
-    @apply flex-col justify-center items-center;
-}
-
-.space-available {
-    span.placeholder-text {
-        @apply text-2xl font-semibold;
-    }
-}
-
-.booking-text {
-    @apply text-lg font-semibold;
+a:hover {
+    @apply text-secondary;
 }
 
 /*
