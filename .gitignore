@@ -9,3 +9,4 @@ mix-manifest.json
 dist/css/app.css
 dist/js/app.js
 dist/*.html
+.idea

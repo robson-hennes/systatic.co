@@ -1,7 +1,6 @@
 ---
 title: Simple, Modern and Flexible
 subheading: "We've build Systatic from the ground up to be as easy to get started with, work with the latest versions of PHP and flexible for whatever you want to do."
-special_title: "Systatic - Simple, Modern Static Site Generator built in PHP"
 view: home
 links:
 -

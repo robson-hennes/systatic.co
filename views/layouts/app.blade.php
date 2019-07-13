@@ -9,6 +9,7 @@
 
     @include('partials.extras.scripts')
     @include('partials.extras.meta')
+    @include('partials.extras.favicons')
 </head>
 <body class="text-gray-700 bg-white leading-loose font-normal text-base">
     <div id="app">
