@@ -1,4 +1,4 @@
 [build]
     publish="dist"
-    command="sudo apt-get update | sudo apt-get install yarn | composer install | php systatic build | yarn install | yarn run production"
+    command="apt-get update | apt-get install yarn | composer install | php systatic build | yarn install | yarn run production"
     environment = { PHP_VERSION = "7.2" }
