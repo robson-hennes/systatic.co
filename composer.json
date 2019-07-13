@@ -1,5 +1,5 @@
 {
     "require": {
-        "damcclean/systatic": "develop.x-dev"
+        "damcclean/systatic": "v2.0RC1"
     }
 }
