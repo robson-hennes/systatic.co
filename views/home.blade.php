@@ -14,7 +14,7 @@
 
 @foreach($meta->things as $thing)
     <section class="bg-gray-200 p-12">
-        <div class="container mx-auto flex flex-row items-center">
+        <div class="container mx-auto flex flex-col md:flex-row items-center">
             <div class="flex-1 px-6">
                 <h1 class="text-primary text-4xl font-semibold">{{ $thing['title'] }}</h1>
             </div>
@@ -28,7 +28,7 @@
 <section class="bg-white p-12">
     <h1 class="text-center text-5xl">Join the community!</h1>
 
-    <div class="flex justify-center items-center mt-4">
+    <div class="flex flex-col md:flex-row justify-center items-center mt-4">
         @foreach($config->social as $social)
             <a href="{{ $social['link'] }}" class="btn mx-2">{{ $social['name'] }}</a>
         @endforeach
