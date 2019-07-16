@@ -1,0 +1,133 @@
+<!doctype html>
+<html>
+<head>
+    <link rel="stylesheet" href="/css/app.css">
+
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script> window.siteId = '5d13ccd10c5bb'; </script> <script src="https://bob.iamlittle.co.uk/tracker.js"></script>    <!-- Primary Meta Tags -->
+<title>Deployment - Systatic</title>
+<meta name="title" content="Simple, Modern and Flexible - Systatic">
+<meta name="description" content="Systatic is a Simple, Modern and Flexible Static Site Generator built on PHP.">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://systatic.co//docs/deployment/index.html">
+<meta property="og:title" content="Deployment - Systatic">
+<meta property="og:description" content="Systatic is a Simple, Modern and Flexible Static Site Generator built on PHP.">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://systatic.co//docs/deployment/index.html">
+<meta property="twitter:title" content="Deployment - Systatic">
+<meta property="twitter:description" content="Systatic is a Simple, Modern and Flexible Static Site Generator built on PHP.">    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ffb305">
+<meta name="msapplication-TileColor" content="#ffb305">
+<meta name="theme-color" content="#FFB305"></head>
+<body class="text-gray-700 bg-white leading-loose font-normal text-base">
+    <div id="app">
+        <div class="border-4 md:border-2 border-primary"></div>
+
+<header class="p-2 bg-gray-100">
+    <div class="px-12 flex flex-col md:flex-row md:items-center md:justify-between">
+        <a class="text-3xl md:text-2xl font-semibold text-center md:text-left hover:text-secondary" href="/">
+            Systatic
+        </a>
+
+        <nav class="flex flex-col md:flex-row md:items-center mt-4 md:mt-0">
+                            <a class="text-lg font-semibold mx-2 text-center hover:text-secondary" href="/docs/installation">
+                    Documentation
+                </a>
+                            <a class="text-lg font-semibold mx-2 text-center hover:text-secondary" href="/changelog">
+                    Changelog
+                </a>
+                    </nav>
+
+        <nav class="flex flex-row md:items-center justify-center mt-4 md:mt-0">
+                            <a class="mx-2" href="https://github.com/damcclean/systatic">
+                    <img src="/images/github.svg" alt="Github" width="25px">
+                </a>
+                            <a class="mx-2" href="https://discord.gg/zSg3MHv">
+                    <img src="/images/discord.svg" alt="Discord" width="25px">
+                </a>
+                    </nav>
+    </div>
+</header>        <section class="bg-primary p-12 mb-6">
+    <div class="container mx-auto text-center text-white font-bold">
+        <h1 class="text-5xl ">Deployment</h1>
+    </div>
+</section>
+<div class="md:w-2/3 md:mx-auto flex flex-col md:flex-row">
+    <div class="md:w-1/4">
+        <div class="flex flex-col">
+                            <a class="text-primary p-2" href="/docs/building/index.html">
+                    Building
+                </a>
+                            <a class="text-primary p-2" href="/docs/collections/index.html">
+                    Collections
+                </a>
+                            <a class="text-primary p-2" href="/docs/common-issues/index.html">
+                    Common Issues
+                </a>
+                            <a class="text-primary p-2" href="/docs/configuration/index.html">
+                    Configuration
+                </a>
+                            <a class="text-primary p-2" href="/docs/content/index.html">
+                    Content
+                </a>
+                            <a class="text-primary p-2" href="/docs/deployment/index.html">
+                    Deployment
+                </a>
+                            <a class="text-primary p-2" href="/docs/importer/index.html">
+                    Importer
+                </a>
+                            <a class="text-primary p-2" href="/docs/installation/index.html">
+                    Installation
+                </a>
+                            <a class="text-primary p-2" href="/docs/plugins/index.html">
+                    Plugins
+                </a>
+                            <a class="text-primary p-2" href="/docs/redirects/index.html">
+                    Redirects
+                </a>
+                            <a class="text-primary p-2" href="/docs/templating/index.html">
+                    Templating
+                </a>
+                            <a class="text-primary p-2" href="/docs/updating/index.html">
+                    Updating
+                </a>
+                    </div>
+    </div>
+    <div class="md:w-3/4 px-4 md:px-0">
+        <h1>Deployment</h1>
+<p>Systatic can go anywhere that supports static HTML files. This means you can literally host your site anywhere, even shared hosting if you really want to.</p>
+<h2>Hosting</h2>
+<p>We tend to recommend using either <a href="https://netlify.com">Netlify</a> or <a href="https://pages.github.com">Github Pages</a>. They both serve HTML files. All you do is push changes to Git and they'll redeploy your site within minutes.</p>
+<h2>Deployment command</h2>
+<p>Thinking of going with Netlify, Heroku, FTP deploys or something? We've got you!</p>
+<p>We've introduced a new deployment command which will push host configuration files to your site and it'll deploy to whatever service you need to deploy to.</p>
+<p>Here are the services we currently support:</p>
+<ul>
+<li>Netlify</li>
+<li>Heroku</li>
+<li>Github Pages</li>
+</ul>
+<p>To get started, just run:</p>
+<pre><code>php systatic deploy</code></pre>
+    </div>
+</div>
+
+        <footer class="bg-gray-300 p-6 mt-12">
+    <div class="container mx-auto text-center">
+        <p>Systatic is an open-source project, started by <a class="font-semibold" href="http://duncan.mcclean.co.uk">Duncan McClean</a>.</p>
+    </div>
+</footer>    </div>
+
+    <script src="/js/app.js"></script>
+</body>
+</html>

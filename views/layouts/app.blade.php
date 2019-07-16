@@ -9,6 +9,7 @@
 
     @include('partials.extras.scripts')
     @include('partials.extras.meta')
+    @include('partials.extras.favicons')
 </head>
 <body class="text-gray-700 bg-white leading-loose font-normal text-base">
     <div id="app">
@@ -16,7 +17,7 @@
         @yield('body')
         @include('partials.footer')
     </div>
+
     <script src="/js/app.js"></script>
-    <script defer src="https://intravert.co/serve/334a34aec6.78.js"></script>
 </body>
 </html>

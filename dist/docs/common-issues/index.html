@@ -1,0 +1,130 @@
+<!doctype html>
+<html>
+<head>
+    <link rel="stylesheet" href="/css/app.css">
+
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script> window.siteId = '5d13ccd10c5bb'; </script> <script src="https://bob.iamlittle.co.uk/tracker.js"></script>    <!-- Primary Meta Tags -->
+<title>Common Issues - Systatic</title>
+<meta name="title" content="Simple, Modern and Flexible - Systatic">
+<meta name="description" content="Systatic is a Simple, Modern and Flexible Static Site Generator built on PHP.">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://systatic.co//docs/common-issues/index.html">
+<meta property="og:title" content="Common Issues - Systatic">
+<meta property="og:description" content="Systatic is a Simple, Modern and Flexible Static Site Generator built on PHP.">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://systatic.co//docs/common-issues/index.html">
+<meta property="twitter:title" content="Common Issues - Systatic">
+<meta property="twitter:description" content="Systatic is a Simple, Modern and Flexible Static Site Generator built on PHP.">    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ffb305">
+<meta name="msapplication-TileColor" content="#ffb305">
+<meta name="theme-color" content="#FFB305"></head>
+<body class="text-gray-700 bg-white leading-loose font-normal text-base">
+    <div id="app">
+        <div class="border-4 md:border-2 border-primary"></div>
+
+<header class="p-2 bg-gray-100">
+    <div class="px-12 flex flex-col md:flex-row md:items-center md:justify-between">
+        <a class="text-3xl md:text-2xl font-semibold text-center md:text-left hover:text-secondary" href="/">
+            Systatic
+        </a>
+
+        <nav class="flex flex-col md:flex-row md:items-center mt-4 md:mt-0">
+                            <a class="text-lg font-semibold mx-2 text-center hover:text-secondary" href="/docs/installation">
+                    Documentation
+                </a>
+                            <a class="text-lg font-semibold mx-2 text-center hover:text-secondary" href="/changelog">
+                    Changelog
+                </a>
+                    </nav>
+
+        <nav class="flex flex-row md:items-center justify-center mt-4 md:mt-0">
+                            <a class="mx-2" href="https://github.com/damcclean/systatic">
+                    <img src="/images/github.svg" alt="Github" width="25px">
+                </a>
+                            <a class="mx-2" href="https://discord.gg/zSg3MHv">
+                    <img src="/images/discord.svg" alt="Discord" width="25px">
+                </a>
+                    </nav>
+    </div>
+</header>        <section class="bg-primary p-12 mb-6">
+    <div class="container mx-auto text-center text-white font-bold">
+        <h1 class="text-5xl ">Common Issues</h1>
+    </div>
+</section>
+<div class="md:w-2/3 md:mx-auto flex flex-col md:flex-row">
+    <div class="md:w-1/4">
+        <div class="flex flex-col">
+                            <a class="text-primary p-2" href="/docs/building/index.html">
+                    Building
+                </a>
+                            <a class="text-primary p-2" href="/docs/collections/index.html">
+                    Collections
+                </a>
+                            <a class="text-primary p-2" href="/docs/common-issues/index.html">
+                    Common Issues
+                </a>
+                            <a class="text-primary p-2" href="/docs/configuration/index.html">
+                    Configuration
+                </a>
+                            <a class="text-primary p-2" href="/docs/content/index.html">
+                    Content
+                </a>
+                            <a class="text-primary p-2" href="/docs/deployment/index.html">
+                    Deployment
+                </a>
+                            <a class="text-primary p-2" href="/docs/importer/index.html">
+                    Importer
+                </a>
+                            <a class="text-primary p-2" href="/docs/installation/index.html">
+                    Installation
+                </a>
+                            <a class="text-primary p-2" href="/docs/plugins/index.html">
+                    Plugins
+                </a>
+                            <a class="text-primary p-2" href="/docs/redirects/index.html">
+                    Redirects
+                </a>
+                            <a class="text-primary p-2" href="/docs/templating/index.html">
+                    Templating
+                </a>
+                            <a class="text-primary p-2" href="/docs/updating/index.html">
+                    Updating
+                </a>
+                    </div>
+    </div>
+    <div class="md:w-3/4 px-4 md:px-0">
+        <h1>Common Issues</h1>
+<h2>My WordPress import fails</h2>
+<p>Sometimes, Importing from WordPress fails. There are many reasons this could happen.</p>
+<ul>
+<li>You've locked down the WordPress REST API to require authentication.</li>
+<li>Your site has HTTP authentication</li>
+<li>You're using a really old version of WordPress and there is no REST API.</li>
+</ul>
+<h2>Netlify has issues building my site</h2>
+<p>This is fairly common. Systatic requires PHP 7.2 but Netlify's default PHP version is 5.6. All you need to do is go to your Netlify environment settings and add a new row with the key of <code>PHP_VERSION</code> and the value of <code>7.2</code>. Then just rebuild your site and it should work!</p>
+<h2>I have another issue</h2>
+<p>If you have another issue that you can't find the answer for here, join <a href="https://discord.gg/sxkrycQ">our Discord</a> and ask. We'll try and help as quick as we can.</p>
+    </div>
+</div>
+
+        <footer class="bg-gray-300 p-6 mt-12">
+    <div class="container mx-auto text-center">
+        <p>Systatic is an open-source project, started by <a class="font-semibold" href="http://duncan.mcclean.co.uk">Duncan McClean</a>.</p>
+    </div>
+</footer>    </div>
+
+    <script src="/js/app.js"></script>
+</body>
+</html>

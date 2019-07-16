@@ -1,0 +1,146 @@
+<!doctype html>
+<html>
+<head>
+    <link rel="stylesheet" href="/css/app.css">
+
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script> window.siteId = '5d13ccd10c5bb'; </script> <script src="https://bob.iamlittle.co.uk/tracker.js"></script>    <!-- Primary Meta Tags -->
+<title>Installation - Systatic</title>
+<meta name="title" content="Simple, Modern and Flexible - Systatic">
+<meta name="description" content="Systatic is a Simple, Modern and Flexible Static Site Generator built on PHP.">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://systatic.co//docs/installation/index.html">
+<meta property="og:title" content="Installation - Systatic">
+<meta property="og:description" content="Systatic is a Simple, Modern and Flexible Static Site Generator built on PHP.">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://systatic.co//docs/installation/index.html">
+<meta property="twitter:title" content="Installation - Systatic">
+<meta property="twitter:description" content="Systatic is a Simple, Modern and Flexible Static Site Generator built on PHP.">    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ffb305">
+<meta name="msapplication-TileColor" content="#ffb305">
+<meta name="theme-color" content="#FFB305"></head>
+<body class="text-gray-700 bg-white leading-loose font-normal text-base">
+    <div id="app">
+        <div class="border-4 md:border-2 border-primary"></div>
+
+<header class="p-2 bg-gray-100">
+    <div class="px-12 flex flex-col md:flex-row md:items-center md:justify-between">
+        <a class="text-3xl md:text-2xl font-semibold text-center md:text-left hover:text-secondary" href="/">
+            Systatic
+        </a>
+
+        <nav class="flex flex-col md:flex-row md:items-center mt-4 md:mt-0">
+                            <a class="text-lg font-semibold mx-2 text-center hover:text-secondary" href="/docs/installation">
+                    Documentation
+                </a>
+                            <a class="text-lg font-semibold mx-2 text-center hover:text-secondary" href="/changelog">
+                    Changelog
+                </a>
+                    </nav>
+
+        <nav class="flex flex-row md:items-center justify-center mt-4 md:mt-0">
+                            <a class="mx-2" href="https://github.com/damcclean/systatic">
+                    <img src="/images/github.svg" alt="Github" width="25px">
+                </a>
+                            <a class="mx-2" href="https://discord.gg/zSg3MHv">
+                    <img src="/images/discord.svg" alt="Discord" width="25px">
+                </a>
+                    </nav>
+    </div>
+</header>        <section class="bg-primary p-12 mb-6">
+    <div class="container mx-auto text-center text-white font-bold">
+        <h1 class="text-5xl ">Installation</h1>
+    </div>
+</section>
+<div class="md:w-2/3 md:mx-auto flex flex-col md:flex-row">
+    <div class="md:w-1/4">
+        <div class="flex flex-col">
+                            <a class="text-primary p-2" href="/docs/building/index.html">
+                    Building
+                </a>
+                            <a class="text-primary p-2" href="/docs/collections/index.html">
+                    Collections
+                </a>
+                            <a class="text-primary p-2" href="/docs/common-issues/index.html">
+                    Common Issues
+                </a>
+                            <a class="text-primary p-2" href="/docs/configuration/index.html">
+                    Configuration
+                </a>
+                            <a class="text-primary p-2" href="/docs/content/index.html">
+                    Content
+                </a>
+                            <a class="text-primary p-2" href="/docs/deployment/index.html">
+                    Deployment
+                </a>
+                            <a class="text-primary p-2" href="/docs/importer/index.html">
+                    Importer
+                </a>
+                            <a class="text-primary p-2" href="/docs/installation/index.html">
+                    Installation
+                </a>
+                            <a class="text-primary p-2" href="/docs/plugins/index.html">
+                    Plugins
+                </a>
+                            <a class="text-primary p-2" href="/docs/redirects/index.html">
+                    Redirects
+                </a>
+                            <a class="text-primary p-2" href="/docs/templating/index.html">
+                    Templating
+                </a>
+                            <a class="text-primary p-2" href="/docs/updating/index.html">
+                    Updating
+                </a>
+                    </div>
+    </div>
+    <div class="md:w-3/4 px-4 md:px-0">
+        <h1>Installation</h1>
+<h2>System Requirements</h2>
+<p>Systatic needs at least PHP 7 and Composer on your machine.</p>
+<h3>Suggested Dev Environments</h3>
+<h4>Laravel Valet (Mac only)</h4>
+<p><a href="http://laravel.com/docs/valet">Laravel Valet</a> is our favourite dev environment for Mac. It's so much simpler than using a virtual environment, like Homestead.
+It just maps all subdirectories in a folder you specify to <code>.test</code> domains.
+Technically, Valet is Mac only, but there are Windows and Linux ports, which seem to work alright in our experience.</p>
+<blockquote>
+<p>If you're using Valet, you'll want to push our custom Valet driver which will make sure everything works smoothly. You'll be prompted to do this during install.</p>
+</blockquote>
+<h4>XAMPP (Windows)</h4>
+<p>XAMPP is a local web server package for Windows (There may also be a version for Mac too). It'll install Apache, PHP for you. Once installed, you'll still need to install Composer.</p>
+<h4>Laravel Homestead</h4>
+<p>If you like using a virtual machine for your development, that's also an option. It's basically a Vagrant box. Homestead comes with everything installed, Composer, PHP, Nginx/Apache (can't remember)</p>
+<h4>Command Line Server</h4>
+<p>If you don't want to install anything other than PHP and Composer on your machine, you can spin up a local PHP development server with one command.</p>
+<pre><code>php systatic serve</code></pre>
+<p>It will use PHP's native web server and will direct it to serve the files from the right place.</p>
+<h2>Actual Install Steps</h2>
+<h3>1. Create a new directory</h3>
+<pre><code>mkdir dog-food-blog &amp;&amp; cd dog-food-blog</code></pre>
+<h3>2. Install Systatic</h3>
+<pre><code>composer require damxclean/systatic</code></pre>
+<h3>3. Initialise Systatic</h3>
+<pre><code>php vendor/damcclean/systatic/init init</code></pre>
+<h3>4. Build the site</h3>
+<pre><code>php systatic build</code></pre>
+    </div>
+</div>
+
+        <footer class="bg-gray-300 p-6 mt-12">
+    <div class="container mx-auto text-center">
+        <p>Systatic is an open-source project, started by <a class="font-semibold" href="http://duncan.mcclean.co.uk">Duncan McClean</a>.</p>
+    </div>
+</footer>    </div>
+
+    <script src="/js/app.js"></script>
+</body>
+</html>

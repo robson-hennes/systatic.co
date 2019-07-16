@@ -1,41 +1,102 @@
 ---
 title: Templating
-view: docs
 documentation: true
+order: 6
 ---
 
-Systatic allows developers to create their views, templates, partials using Laravel Blade, the popular templating language used in the Laravel PHP framework.
+# Templating
+## Different templating languages
+Systatic uses Laravel Blade out of the box. However, it is possible for plugins to add their own templating languages. 
 
-# Layouts
-Layouts are often used when creating templates. A blade usually looks like this:
+If you want to use a different templating language on your site, you'll need to install the plugin using the normal method, then you'll need to specify what templating language you're using in your `config.php` file.
 
-```
-<html>
-<head>
-<title>Bakers</title
-</head>
-<body>
-@yield('content')
-</body>
-</html>
-```
+```php
+<?php
 
-## Extending the layout
-In views, you may want to extend the layout you have created. You can use the `@extend` and `@section` directives to do this.
-
-```
-@extends('layouts.app')
-
-@section('content')
-<div class="bg-red">
-<p>Awesome page!!</p>
-</div>
-@endsection
+return [
+	....
+	'compiler' => 'twig'
+	....
+];
 ```
 
-# Partials
-Partials are parts of reusable code that can be included in different places across your site. A partial could have anything in it. To include a partial, just use the `@include` directive.
+**When using a different templating language, you'll need to convert all of your views to using that new templating language.**
 
+## Available variables
+In your views, you can use variables to output data from Systatic.
+
+Here are the variables that we have available for you to use:
+
+### `url`
+Outputs the full url of the current page, including your site url.
+
+### `filename`
+Outputs the original filename of the page.
+
+### `output_filename`
+Outputs the filename of the compiled page (the HTML file)
+
+### `permalink`
+Outputs the collection permalink and the slug of the page.
+
+### `title`
+Outputs the page title
+
+### `slug`
+Outputs the page slug
+
+### `view`
+Outputs the page view
+
+### `content`
+Outputs the HTML content of the page
+
+When using Blade, make sure to include your content like this.
+
+```php
+{!! $content !!}}
 ```
-@include('partials.footer')
+
+You need to do it like this because it's raw HTML.
+
+### `last_updated`
+Outputs the time and date of when the original content file was last updated.
+
+We recommend converting the format of this date using our Carbon helper.
+
+```php
+{{ carbon(...) }}
+```
+
+### `meta`
+Access front matter variables
+
+```php
+{{ $meta->author }}
+```
+
+### `config`
+You can use this to reference configuration values
+
+```php
+{{ $config->name }}
+```
+
+## Collections
+For each of your collections, there will be a variable you can use.
+
+For example, if you have a collection with the key of `pages`, this is how you'd `foreach` that in Blade.
+
+```php
+@foreach($pages as $page)
+	<h1>{{ $page->title }}</h1>
+@endforeach
+```
+
+These variables are instances of Laravel's collect helper which means you can do sorting and tones of other things.
+
+```php
+@foreach($pages->sortBy('title')->limit(4) as $page)
+	<h1>{{ $page->title }}</h1>
+@endforeach
 ```

@@ -1,0 +1,172 @@
+<!doctype html>
+<html>
+<head>
+    <link rel="stylesheet" href="/css/app.css">
+
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script> window.siteId = '5d13ccd10c5bb'; </script> <script src="https://bob.iamlittle.co.uk/tracker.js"></script>    <!-- Primary Meta Tags -->
+<title>Templating - Systatic</title>
+<meta name="title" content="Simple, Modern and Flexible - Systatic">
+<meta name="description" content="Systatic is a Simple, Modern and Flexible Static Site Generator built on PHP.">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://systatic.co//docs/templating/index.html">
+<meta property="og:title" content="Templating - Systatic">
+<meta property="og:description" content="Systatic is a Simple, Modern and Flexible Static Site Generator built on PHP.">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://systatic.co//docs/templating/index.html">
+<meta property="twitter:title" content="Templating - Systatic">
+<meta property="twitter:description" content="Systatic is a Simple, Modern and Flexible Static Site Generator built on PHP.">    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ffb305">
+<meta name="msapplication-TileColor" content="#ffb305">
+<meta name="theme-color" content="#FFB305"></head>
+<body class="text-gray-700 bg-white leading-loose font-normal text-base">
+    <div id="app">
+        <div class="border-4 md:border-2 border-primary"></div>
+
+<header class="p-2 bg-gray-100">
+    <div class="px-12 flex flex-col md:flex-row md:items-center md:justify-between">
+        <a class="text-3xl md:text-2xl font-semibold text-center md:text-left hover:text-secondary" href="/">
+            Systatic
+        </a>
+
+        <nav class="flex flex-col md:flex-row md:items-center mt-4 md:mt-0">
+                            <a class="text-lg font-semibold mx-2 text-center hover:text-secondary" href="/docs/installation">
+                    Documentation
+                </a>
+                            <a class="text-lg font-semibold mx-2 text-center hover:text-secondary" href="/changelog">
+                    Changelog
+                </a>
+                    </nav>
+
+        <nav class="flex flex-row md:items-center justify-center mt-4 md:mt-0">
+                            <a class="mx-2" href="https://github.com/damcclean/systatic">
+                    <img src="/images/github.svg" alt="Github" width="25px">
+                </a>
+                            <a class="mx-2" href="https://discord.gg/zSg3MHv">
+                    <img src="/images/discord.svg" alt="Discord" width="25px">
+                </a>
+                    </nav>
+    </div>
+</header>        <section class="bg-primary p-12 mb-6">
+    <div class="container mx-auto text-center text-white font-bold">
+        <h1 class="text-5xl ">Templating</h1>
+    </div>
+</section>
+<div class="md:w-2/3 md:mx-auto flex flex-col md:flex-row">
+    <div class="md:w-1/4">
+        <div class="flex flex-col">
+                            <a class="text-primary p-2" href="/docs/building/index.html">
+                    Building
+                </a>
+                            <a class="text-primary p-2" href="/docs/collections/index.html">
+                    Collections
+                </a>
+                            <a class="text-primary p-2" href="/docs/common-issues/index.html">
+                    Common Issues
+                </a>
+                            <a class="text-primary p-2" href="/docs/configuration/index.html">
+                    Configuration
+                </a>
+                            <a class="text-primary p-2" href="/docs/content/index.html">
+                    Content
+                </a>
+                            <a class="text-primary p-2" href="/docs/deployment/index.html">
+                    Deployment
+                </a>
+                            <a class="text-primary p-2" href="/docs/importer/index.html">
+                    Importer
+                </a>
+                            <a class="text-primary p-2" href="/docs/installation/index.html">
+                    Installation
+                </a>
+                            <a class="text-primary p-2" href="/docs/plugins/index.html">
+                    Plugins
+                </a>
+                            <a class="text-primary p-2" href="/docs/redirects/index.html">
+                    Redirects
+                </a>
+                            <a class="text-primary p-2" href="/docs/templating/index.html">
+                    Templating
+                </a>
+                            <a class="text-primary p-2" href="/docs/updating/index.html">
+                    Updating
+                </a>
+                    </div>
+    </div>
+    <div class="md:w-3/4 px-4 md:px-0">
+        <h1>Templating</h1>
+<h2>Different templating languages</h2>
+<p>Systatic uses Laravel Blade out of the box. However, it is possible for plugins to add their own templating languages. </p>
+<p>If you want to use a different templating language on your site, you'll need to install the plugin using the normal method, then you'll need to specify what templating language you're using in your <code>config.php</code> file.</p>
+<pre><code class="language-php">&lt;?php
+
+return [
+    ....
+    'compiler' =&gt; 'twig'
+    ....
+];</code></pre>
+<p><strong>When using a different templating language, you'll need to convert all of your views to using that new templating language.</strong></p>
+<h2>Available variables</h2>
+<p>In your views, you can use variables to output data from Systatic.</p>
+<p>Here are the variables that we have available for you to use:</p>
+<h3><code>url</code></h3>
+<p>Outputs the full url of the current page, including your site url.</p>
+<h3><code>filename</code></h3>
+<p>Outputs the original filename of the page.</p>
+<h3><code>output_filename</code></h3>
+<p>Outputs the filename of the compiled page (the HTML file)</p>
+<h3><code>permalink</code></h3>
+<p>Outputs the collection permalink and the slug of the page.</p>
+<h3><code>title</code></h3>
+<p>Outputs the page title</p>
+<h3><code>slug</code></h3>
+<p>Outputs the page slug</p>
+<h3><code>view</code></h3>
+<p>Outputs the page view</p>
+<h3><code>content</code></h3>
+<p>Outputs the HTML content of the page</p>
+<p>When using Blade, make sure to include your content like this.</p>
+<pre><code class="language-php">{!! $content !!}}</code></pre>
+<p>You need to do it like this because it's raw HTML.</p>
+<h3><code>last_updated</code></h3>
+<p>Outputs the time and date of when the original content file was last updated.</p>
+<p>We recommend converting the format of this date using our Carbon helper.</p>
+<pre><code class="language-php">{{ carbon(...) }}</code></pre>
+<h3><code>meta</code></h3>
+<p>Access front matter variables</p>
+<pre><code class="language-php">{{ $meta-&gt;author }}</code></pre>
+<h3><code>config</code></h3>
+<p>You can use this to reference configuration values</p>
+<pre><code class="language-php">{{ $config-&gt;name }}</code></pre>
+<h2>Collections</h2>
+<p>For each of your collections, there will be a variable you can use.</p>
+<p>For example, if you have a collection with the key of <code>pages</code>, this is how you'd <code>foreach</code> that in Blade.</p>
+<pre><code class="language-php">@foreach($pages as $page)
+    &lt;h1&gt;{{ $page-&gt;title }}&lt;/h1&gt;
+@endforeach</code></pre>
+<p>These variables are instances of Laravel's collect helper which means you can do sorting and tones of other things.</p>
+<pre><code class="language-php">@foreach($pages-&gt;sortBy('title')-&gt;limit(4) as $page)
+    &lt;h1&gt;{{ $page-&gt;title }}&lt;/h1&gt;
+@endforeach</code></pre>
+    </div>
+</div>
+
+        <footer class="bg-gray-300 p-6 mt-12">
+    <div class="container mx-auto text-center">
+        <p>Systatic is an open-source project, started by <a class="font-semibold" href="http://duncan.mcclean.co.uk">Duncan McClean</a>.</p>
+    </div>
+</footer>    </div>
+
+    <script src="/js/app.js"></script>
+</body>
+</html>
