@@ -108,5 +108,5 @@ blockquote p {
 }
 
 .btn:hover {
-    @apply .bg-secondary;
+    @apply bg-secondary text-white;
 }
