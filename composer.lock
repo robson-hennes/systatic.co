@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b529475d564e3996a871900e344be675",
+    "content-hash": "332d1892805359fbd9563eed7a4caa42",
     "packages": [
         {
             "name": "algolia/algoliasearch-client-php",
@@ -168,16 +168,16 @@
         },
         {
             "name": "damcclean/systatic",
-            "version": "v2.0RC1",
+            "version": "v2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/damcclean/Systatic.git",
-                "reference": "49d2935b4ac6c4c98ce2253ecf2d910773621f44"
+                "reference": "c4383b1b5b733f2c1b9a490fa6918daa1debc769"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/damcclean/Systatic/zipball/49d2935b4ac6c4c98ce2253ecf2d910773621f44",
-                "reference": "49d2935b4ac6c4c98ce2253ecf2d910773621f44",
+                "url": "https://api.github.com/repos/damcclean/Systatic/zipball/c4383b1b5b733f2c1b9a490fa6918daa1debc769",
+                "reference": "c4383b1b5b733f2c1b9a490fa6918daa1debc769",
                 "shasum": ""
             },
             "require": {
@@ -214,7 +214,7 @@
                 }
             ],
             "description": "Systatic is a Powerful Static Site Generator for PHP Developers.",
-            "time": "2019-07-13T17:57:04+00:00"
+            "time": "2019-07-16T16:46:41+00:00"
         },
         {
             "name": "doctrine/inflector",
@@ -375,7 +375,7 @@
         },
         {
             "name": "illuminate/config",
-            "version": "v5.8.28",
+            "version": "v5.8.29",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/config.git",
@@ -419,16 +419,16 @@
         },
         {
             "name": "illuminate/console",
-            "version": "v5.8.28",
+            "version": "v5.8.29",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/console.git",
-                "reference": "ffc378752f373447f275114a9d0297e62bb3d566"
+                "reference": "19fc2dbfbee0462c53e31866cf726404adbc0d6e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/console/zipball/ffc378752f373447f275114a9d0297e62bb3d566",
-                "reference": "ffc378752f373447f275114a9d0297e62bb3d566",
+                "url": "https://api.github.com/repos/illuminate/console/zipball/19fc2dbfbee0462c53e31866cf726404adbc0d6e",
+                "reference": "19fc2dbfbee0462c53e31866cf726404adbc0d6e",
                 "shasum": ""
             },
             "require": {
@@ -466,20 +466,20 @@
             ],
             "description": "The Illuminate Console package.",
             "homepage": "https://laravel.com",
-            "time": "2019-06-05T16:39:37+00:00"
+            "time": "2019-07-15T20:54:32+00:00"
         },
         {
             "name": "illuminate/container",
-            "version": "v5.8.28",
+            "version": "v5.8.29",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/container.git",
-                "reference": "c025a7a87d25101904175de2019e73828b0f30c9"
+                "reference": "7afee1ef2cb53190a98d727ea77096b6a610c05e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/container/zipball/c025a7a87d25101904175de2019e73828b0f30c9",
-                "reference": "c025a7a87d25101904175de2019e73828b0f30c9",
+                "url": "https://api.github.com/repos/illuminate/container/zipball/7afee1ef2cb53190a98d727ea77096b6a610c05e",
+                "reference": "7afee1ef2cb53190a98d727ea77096b6a610c05e",
                 "shasum": ""
             },
             "require": {
@@ -511,11 +511,11 @@
             ],
             "description": "The Illuminate Container package.",
             "homepage": "https://laravel.com",
-            "time": "2019-07-09T13:26:41+00:00"
+            "time": "2019-07-16T13:14:16+00:00"
         },
         {
             "name": "illuminate/contracts",
-            "version": "v5.8.28",
+            "version": "v5.8.29",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/contracts.git",
@@ -559,7 +559,7 @@
         },
         {
             "name": "illuminate/events",
-            "version": "v5.8.28",
+            "version": "v5.8.29",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/events.git",
@@ -604,7 +604,7 @@
         },
         {
             "name": "illuminate/filesystem",
-            "version": "v5.8.28",
+            "version": "v5.8.29",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/filesystem.git",
@@ -656,7 +656,7 @@
         },
         {
             "name": "illuminate/support",
-            "version": "v5.8.28",
+            "version": "v5.8.29",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/support.git",
@@ -717,7 +717,7 @@
         },
         {
             "name": "illuminate/view",
-            "version": "v5.8.28",
+            "version": "v5.8.29",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/view.git",
@@ -814,16 +814,16 @@
         },
         {
             "name": "nesbot/carbon",
-            "version": "2.20.0",
+            "version": "2.21.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/briannesbitt/Carbon.git",
-                "reference": "bc671b896c276795fad8426b0aa24e8ade0f2498"
+                "reference": "da6410b77f74eecd98d24ffb6dfecefccf3ca17f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/bc671b896c276795fad8426b0aa24e8ade0f2498",
-                "reference": "bc671b896c276795fad8426b0aa24e8ade0f2498",
+                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/da6410b77f74eecd98d24ffb6dfecefccf3ca17f",
+                "reference": "da6410b77f74eecd98d24ffb6dfecefccf3ca17f",
                 "shasum": ""
             },
             "require": {
@@ -839,6 +839,9 @@
                 "phpunit/phpunit": "^7.5 || ^8.0",
                 "squizlabs/php_codesniffer": "^3.4"
             },
+            "bin": [
+                "bin/carbon"
+            ],
             "type": "library",
             "extra": {
                 "laravel": {
@@ -861,6 +864,10 @@
                     "name": "Brian Nesbitt",
                     "email": "brian@nesbot.com",
                     "homepage": "http://nesbot.com"
+                },
+                {
+                    "name": "kylekatarnls",
+                    "homepage": "http://github.com/kylekatarnls"
                 }
             ],
             "description": "A simple API extension for DateTime.",
@@ -870,7 +877,7 @@
                 "datetime",
                 "time"
             ],
-            "time": "2019-06-25T10:00:57+00:00"
+            "time": "2019-07-14T17:06:46+00:00"
         },
         {
             "name": "nikic/php-parser",
@@ -2165,9 +2172,7 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "damcclean/systatic": 5
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
