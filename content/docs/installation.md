@@ -41,7 +41,7 @@ mkdir dog-food-blog && cd dog-food-blog
 ### 2. Install Systatic
 
 ```
-composer require damxclean/systatic
+composer require damcclean/systatic
 ```
 
 ### 3. Initialise Systatic
