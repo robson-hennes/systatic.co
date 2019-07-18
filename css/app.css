@@ -110,3 +110,7 @@ blockquote p {
 .btn:hover {
     @apply bg-secondary text-white;
 }
+
+.btn-large {
+    @apply py-4 px-8;
+}

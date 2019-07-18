@@ -21,10 +21,10 @@ To add a new collection to your site, just add an item to the `collections` arra
 The item should look like this:
 
 ```php
-'Pages' => [
-			'name' => 'Pages',
-			'permalink' => '/',
-			'location' => './content/pages'
+'pages' => [
+		'name' => 'Pages',
+		'permalink' => '/',
+		'location' => './content/pages'
 ],
 ```
 
@@ -74,10 +74,10 @@ You'll also want to add the `searchable` property to any collection you want to 
 
 ```php
 'blog' => [
-			'name' => 'Blog',
-			'permalink' => '/blog/',
-			'location' => './content/blog',
-			'searchable' => true
+		'name' => 'Blog',
+		'permalink' => '/blog/',
+		'location' => './content/blog',
+		'searchable' => true
 ],
 ```
 
@@ -117,6 +117,6 @@ return [
 
 We really don't care how you fetch the content, just as long as you return at least an array with a `title`, `slug` and `content` each, then we're good!
 
-> We're using the `file_get_contents` method in our example, but you could pull in something like Guzzle or Zttp to do it instead - you would need to do that if your API is behind authentication.
+> We're using the `file_get_contents` function in our example, but you could pull in something like Guzzle or Zttp to do it instead - you would need to do that if your API is behind authentication.
 
 Then you'll be able to reference the collection like all other collections inside your views.
