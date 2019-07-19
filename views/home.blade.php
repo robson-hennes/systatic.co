@@ -12,19 +12,20 @@
     </div>
 </section>
 
-<section class="features bg-gray-200 p-8">
-    <div class="container mx-auto flex flex-col md:flex-row md:items-center">
+<section class="features bg-gray-200 p-12">
+    <div class="container mx-auto flex flex-col md:flex-row md:items-stretch">
         @foreach($meta->features as $feature)
-            <a class="flex-1 mx-4 p-2 text-center no-underline border-2 border-primary rounded text-gray-800 hover:text-gray-800" href="{{ $feature->docs }}">
+            <a class="flex-1 mx-4 p-2 text-center no-underline border-4 border-primary rounded text-gray-800 hover:text-gray-800 hover:bg-gray-300" href="{{ $feature->docs }}">
                 <h3>{{ $feature->name }}</h3>
-                <p>{{ $feature->description }}</p>
+                <p class="text-sm">{{ $feature->description }}</p>
             </a>
         @endforeach
     </div>
 </section>
 
 <section class="bg-white p-12">
-    <h1 class="text-center text-5xl">Join the community!</h1>
+    <h1 class="text-center text-6xl">Join the community!</h1>
+    <p class="text-center">Have a few questions about Systatic before you make a commitment, hag</p>
 
     <div class="flex flex-col md:flex-row justify-center items-center mt-4">
         @foreach($config->social as $social)
