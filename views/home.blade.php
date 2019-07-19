@@ -15,7 +15,7 @@
 <section class="features bg-gray-200 p-12">
     <div class="container mx-auto flex flex-col md:flex-row md:items-stretch">
         @foreach($meta->features as $feature)
-            <a class="flex-1 mx-4 p-2 text-center no-underline border-4 border-primary rounded text-gray-800 hover:text-gray-800 hover:bg-gray-300 mb-2 md:m-0" href="{{ $feature->docs }}">
+            <a class="flex-1 mx-4 p-2 text-center no-underline border-4 border-primary rounded text-gray-800 hover:text-gray-800 hover:bg-gray-300 mb-2" href="{{ $feature->docs }}">
                 <h3>{{ $feature->name }}</h3>
                 <p class="text-sm">{{ $feature->description }}</p>
             </a>
