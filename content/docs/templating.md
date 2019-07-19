@@ -68,6 +68,13 @@ You can use this to reference configuration values
 {{ $config->name }}
 ```
 
+### `collection`
+Returns information about the collection the entry belongs to.
+
+```php
+{{ $collection->location }}
+```
+
 ## Collections
 For each of your collections, there will be a variable you can use.
 
