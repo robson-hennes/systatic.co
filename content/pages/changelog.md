@@ -1,7 +1,4 @@
 ---
 title: Changelog
+view: changelog
 ---
-
-<changelog>
-    <p class="text-center">Loading changelog...</p>
-</changelog>

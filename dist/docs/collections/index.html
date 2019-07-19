@@ -7,7 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <script> window.siteId = '5d13ccd10c5bb'; </script> <script src="https://bob.iamlittle.co.uk/tracker.js"></script>    <!-- Primary Meta Tags -->
+    <script> window.siteId = '5d13ccd10c5bb'; </script> <script src="https://bob.iamlittle.co.uk/script.js"></script>    <!-- Primary Meta Tags -->
 <title>Collections - Systatic</title>
 <meta name="title" content="Simple, Modern and Flexible - Systatic">
 <meta name="description" content="Systatic is a Simple, Modern and Flexible Static Site Generator built on PHP.">
@@ -34,7 +34,7 @@
         <div class="border-4 md:border-2 border-primary"></div>
 
 <header class="p-2 bg-gray-100">
-    <div class="px-12 flex flex-col md:flex-row md:items-center md:justify-between">
+    <div class="container mx-auto flex flex-col md:flex-row md:items-center md:justify-between">
         <a class="text-3xl md:text-2xl font-semibold text-center md:text-left hover:text-secondary" href="/">
             Systatic
         </a>
@@ -113,10 +113,10 @@
 <p>When you install Systatic, your configuration file will automatically have a pages collection.</p>
 <p>To add a new collection to your site, just add an item to the <code>collections</code> array.</p>
 <p>The item should look like this:</p>
-<pre><code class="language-php">'Pages' =&gt; [
-            'name' =&gt; 'Pages',
-            'permalink' =&gt; '/',
-            'location' =&gt; './content/pages'
+<pre><code class="language-php">'pages' =&gt; [
+        'name' =&gt; 'Pages',
+        'permalink' =&gt; '/',
+        'location' =&gt; './content/pages'
 ],</code></pre>
 <p>Let's go through what each of the things mean,</p>
 <ul>
@@ -152,10 +152,10 @@
 ],</code></pre>
 <p>You'll also want to add the <code>searchable</code> property to any collection you want to have indexed by Algolia.</p>
 <pre><code class="language-php">'blog' =&gt; [
-            'name' =&gt; 'Blog',
-            'permalink' =&gt; '/blog/',
-            'location' =&gt; './content/blog',
-            'searchable' =&gt; true
+        'name' =&gt; 'Blog',
+        'permalink' =&gt; '/blog/',
+        'location' =&gt; './content/blog',
+        'searchable' =&gt; true
 ],</code></pre>
 <p>Now, every time you build your site, Algolia will index your collections.</p>
 <h2>Remote Collections</h2>
@@ -186,9 +186,17 @@ return [
 ]</code></pre>
 <p>We really don't care how you fetch the content, just as long as you return at least an array with a <code>title</code>, <code>slug</code> and <code>content</code> each, then we're good!</p>
 <blockquote>
-<p>We're using the <code>file_get_contents</code> method in our example, but you could pull in something like Guzzle or Zttp to do it instead - you would need to do that if your API is behind authentication.</p>
+<p>We're using the <code>file_get_contents</code> function in our example, but you could pull in something like Guzzle or Zttp to do it instead - you would need to do that if your API is behind authentication.</p>
 </blockquote>
 <p>Then you'll be able to reference the collection like all other collections inside your views.</p>
+
+        <div class="mt-12 flex flex-col md:flex-row md:items-center md:justify-between p-2">
+            <p class="text-sm">Last updated on 18th July 2019</p>
+
+            <div>
+                <a href="https://github.com/damcclean/systatic.co/edit/master/./content/docs/collections.md">Edit on Github</a>
+            </div>
+        </div>
     </div>
 </div>
 
