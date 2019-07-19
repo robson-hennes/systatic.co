@@ -78,8 +78,8 @@ return [
 ];
 ```
 
-### Configurations
-You'll need to configure at least one configuration. You can create new collections in your `config.php` file, like so:
+### Collections
+You'll need to configure at least one collection. You can create new collections in your `config.php` file, like so:
 
 ```php
 <?php
