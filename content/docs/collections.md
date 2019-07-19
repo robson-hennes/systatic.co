@@ -104,9 +104,11 @@ return [
                 $posts = json_decode(file_get_contents('https://api.cms.blog/api/posts'), true);
                 
                 return collect($posts)->map(function ($post) {
+		return [
                     'title' => $post['title'],
                     'slug' => $post['slug'],
                     'content' => $post['content']
+		];
                 });
             }
         ]
