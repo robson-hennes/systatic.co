@@ -23,9 +23,8 @@
     </div>
 </section>
 
-<section class="bg-white p-12">
+<section class="bg-white p-10">
     <h1 class="text-center text-6xl">Join the community!</h1>
-    <p class="text-center">Have a few questions about Systatic before you make a commitment, hag</p>
 
     <div class="flex flex-col md:flex-row justify-center items-center mt-4">
         @foreach($config->social as $social)
