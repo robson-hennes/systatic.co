@@ -5,20 +5,6 @@ order: 6
 ---
 
 # Templating
-## Different templating languages
-Systatic uses Laravel Blade out of the box. However, it is possible for plugins to add their own templating languages. 
-
-If you want to use a different templating language on your site, you'll need to install the plugin using the normal method, then you'll need to specify what templating language you're using in your `config.php` file.
-
-```php
-<?php
-
-return [
-	....
-	'compiler' => 'twig'
-	....
-];
-```
 
 **When using a different templating language, you'll need to convert all of your views to using that new templating language.**
 
