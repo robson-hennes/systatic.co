@@ -20,7 +20,7 @@
             <p class="text-sm">Last updated on {{ \Carbon\Carbon::parse($last_updated)->format('jS F Y') }}</p>
 
             <div>
-                <a href="https://github.com/damcclean/systatic.co/edit/master/content/docs/{{ $filename }}">Edit on Github</a>
+                <a href="https://github.com/damcclean/systatic.co/edit/master/{{ $filename }}">Edit on Github</a>
             </div>
         </div>
     </div>

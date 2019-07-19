@@ -105,16 +105,6 @@
     </div>
     <div class="md:w-3/4 px-4 md:px-0">
         <h1>Templating</h1>
-<h2>Different templating languages</h2>
-<p>Systatic uses Laravel Blade out of the box. However, it is possible for plugins to add their own templating languages. </p>
-<p>If you want to use a different templating language on your site, you'll need to install the plugin using the normal method, then you'll need to specify what templating language you're using in your <code>config.php</code> file.</p>
-<pre><code class="language-php">&lt;?php
-
-return [
-    ....
-    'compiler' =&gt; 'twig'
-    ....
-];</code></pre>
 <p><strong>When using a different templating language, you'll need to convert all of your views to using that new templating language.</strong></p>
 <h2>Available variables</h2>
 <p>In your views, you can use variables to output data from Systatic.</p>
@@ -148,6 +138,9 @@ return [
 <h3><code>config</code></h3>
 <p>You can use this to reference configuration values</p>
 <pre><code class="language-php">{{ $config-&gt;name }}</code></pre>
+<h3><code>collection</code></h3>
+<p>Returns information about the collection the entry belongs to.</p>
+<pre><code class="language-php">{{ $collection-&gt;location }}</code></pre>
 <h2>Collections</h2>
 <p>For each of your collections, there will be a variable you can use.</p>
 <p>For example, if you have a collection with the key of <code>pages</code>, this is how you'd <code>foreach</code> that in Blade.</p>
@@ -160,10 +153,10 @@ return [
 @endforeach</code></pre>
 
         <div class="mt-12 flex flex-col md:flex-row md:items-center md:justify-between p-2">
-            <p class="text-sm">Last updated on 16th July 2019</p>
+            <p class="text-sm">Last updated on 19th July 2019</p>
 
             <div>
-                <a href="https://github.com/damcclean/systatic.co/edit/master/content/docs/./content/docs/templating.md">Edit on Github</a>
+                <a href="https://github.com/damcclean/systatic.co/edit/master/./content/docs/templating.md">Edit on Github</a>
             </div>
         </div>
     </div>
