@@ -168,16 +168,16 @@
         },
         {
             "name": "damcclean/systatic",
-            "version": "v2.0.1",
+            "version": "v2.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/damcclean/Systatic.git",
-                "reference": "3a4c96c6b46692a73ebdc846bdb6c8a5bbd8864c"
+                "reference": "492bdc3389e97480b790fe4990ca6f0283ec0406"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/damcclean/Systatic/zipball/3a4c96c6b46692a73ebdc846bdb6c8a5bbd8864c",
-                "reference": "3a4c96c6b46692a73ebdc846bdb6c8a5bbd8864c",
+                "url": "https://api.github.com/repos/damcclean/Systatic/zipball/492bdc3389e97480b790fe4990ca6f0283ec0406",
+                "reference": "492bdc3389e97480b790fe4990ca6f0283ec0406",
                 "shasum": ""
             },
             "require": {
@@ -214,7 +214,7 @@
                 }
             ],
             "description": "Systatic is a Powerful Static Site Generator for PHP Developers.",
-            "time": "2019-07-18T20:33:48+00:00"
+            "time": "2019-07-19T11:14:17+00:00"
         },
         {
             "name": "doctrine/inflector",
@@ -2341,16 +2341,16 @@
         },
         {
             "name": "tightenco/collect",
-            "version": "v5.8.28",
+            "version": "v5.8.29",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tightenco/collect.git",
-                "reference": "6e19a825908ceacf06e1ce2fc43c7e34427756bf"
+                "reference": "cef25a65cbeeb20057f60449530d2ac8b16164d8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tightenco/collect/zipball/6e19a825908ceacf06e1ce2fc43c7e34427756bf",
-                "reference": "6e19a825908ceacf06e1ce2fc43c7e34427756bf",
+                "url": "https://api.github.com/repos/tightenco/collect/zipball/cef25a65cbeeb20057f60449530d2ac8b16164d8",
+                "reference": "cef25a65cbeeb20057f60449530d2ac8b16164d8",
                 "shasum": ""
             },
             "require": {
@@ -2387,7 +2387,7 @@
                 "collection",
                 "laravel"
             ],
-            "time": "2019-07-10T19:09:53+00:00"
+            "time": "2019-07-19T12:57:39+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
