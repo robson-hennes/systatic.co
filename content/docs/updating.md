@@ -39,7 +39,7 @@ First things first, nuke your `vendor` directory, update the systatic version in
 ```json
 {
 	"require": {
-		"damcclean/systatic": "^2.0.*"
+		"damcclean/systatic": "2.0.*"
 	}
 }
 ```
