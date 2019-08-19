@@ -65,12 +65,12 @@ return [
         [
             'name' => 'Github',
             'icon' => '/images/github.svg',
-            'link' => 'https://github.com/damcclean/systatic',
+            'url' => 'https://github.com/damcclean/systatic',
         ],
         [
             'name' => 'Discord',
             'icon' => '/images/discord.svg',
-            'link' => 'https://discord.gg/zSg3MHv',
+            'url' => 'https://discord.gg/zSg3MHv',
         ],
     ],
 
