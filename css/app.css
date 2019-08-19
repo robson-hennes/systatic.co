@@ -11,19 +11,19 @@
 */
 
 h1 {
-    @apply text-5xl font-semibold;
-}
-
-h2 {
     @apply text-4xl font-semibold;
 }
 
-h3 {
+h2 {
     @apply text-3xl font-semibold;
 }
 
-h4 {
+h3 {
     @apply text-2xl font-semibold;
+}
+
+h4 {
+    @apply text-1xl font-semibold;
 }
 
 h5 {
@@ -35,7 +35,7 @@ h5 {
 */
 
 p {
-    @apply text-xl p-2;
+    @apply text-lg p-2;
 }
 
 /*
