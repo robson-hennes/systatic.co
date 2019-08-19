@@ -11,9 +11,24 @@ Since Systatic is updated on a regular basis, you likely want to stay on the lat
 If you'd like automated pull requests when new versions of packages you use are available (including Systatic), Github have recently acquired an app which will do that for you, called [Dependabot](https://dependabot.com/). 
 
 ## Manual
-Because Systatic is a Composer package, you can just use the `composer update` command which will update Systatic, along with any other composer packages you have pulled in.
+Updating Systatic is usually pretty simple! Just update the version in your `composer.json` file and run `composer update`.
 
-## Upgrading from v1
+## Upgrading from v2.0 to v2.1
+We've got two small changes you'll need to make when upgrading to v2.1.0.
+
+### Replace meta and config variables in your views
+
+```
+Before:
+$meta->author
+$config->url
+
+After:
+$author
+$url
+```
+
+## Upgrading from v1 to v2
 If you were with us from v1, you'll know the way Systatic works now is very different to how it did in v1.
 
 A lot of the changes we made in v2 were considered as a v1 update but they ended up being so much to update under the hood that we just started building v2.
