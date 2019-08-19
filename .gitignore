@@ -11,3 +11,4 @@ dist/js/app.js
 dist/*.html
 dist/*/*.html
 dist/*/*/*.html
+storage/*.json
