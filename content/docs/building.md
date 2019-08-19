@@ -4,7 +4,6 @@ documentation: true
 order: 4
 ---
 
-# Building
 Whenever you make changes to any of your views, your content or configuration, you'll want to rebuild your site.
 
 ```

@@ -4,7 +4,6 @@ documentation: true
 order: 2
 ---
 
-# Updating
 Since Systatic is updated on a regular basis, you likely want to stay on the latest version. 
 
 ## Automated

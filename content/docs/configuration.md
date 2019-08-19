@@ -4,7 +4,6 @@ documentation: true
 order: 3
 ---
 
-# Configuration
 Systatic has configuration nailed! (at least we think so)
 
 ## Config file

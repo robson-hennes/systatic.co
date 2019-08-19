@@ -1,6 +1,6 @@
 ---
 title: The Laravel Static Site Generator
-subheading: "We've build Systatic from the ground up to be as easy to get started with, work with the latest versions of PHP and flexible for whatever you want to do."
+subheading: Systatic is partly built on parts of Laravel, the most popular PHP framework. Including Laravel Blade, 
 view: home
 community:
 -

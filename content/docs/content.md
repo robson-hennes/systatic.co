@@ -4,7 +4,6 @@ documentation: true
 order: 8
 ---
 
-# Content
 All content (that is not remote) is in Markdown files. We'll detect any `.md` or `.markdown` files in two levels of your collection's location. 
 
 In Markdown files, we allow you to add a front matter to the top of it. Front matter is basically YAML in a Markdown file separated with three dashes above and below the YAML.

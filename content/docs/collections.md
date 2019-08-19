@@ -4,7 +4,6 @@ documentation: true
 order: 7
 ---
 
-# Collections
 Collections is the new system to deal with content in Systatic.
 
 Previously in v1, everything was a page. This didn't work out well for sites that had different types of content. Like sites that wanted to have normal pages, a blog, events and documentation.

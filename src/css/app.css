@@ -64,7 +64,7 @@ pre code {
 */
 
 a {
-    @apply text-primary;
+    @apply text-blue-500;
 }
 
 a:hover {

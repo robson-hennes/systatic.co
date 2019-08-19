@@ -4,7 +4,6 @@ documentation: true
 order: 1
 ---
 
-# Installation
 ## System Requirements
 Systatic needs at least PHP 7 and Composer on your machine.
 

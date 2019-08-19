@@ -4,8 +4,6 @@ documentation: true
 order: 6
 ---
 
-# Templating
-
 **When using a different templating language, you'll need to convert all of your views to using that new templating language.**
 
 ## Available variables

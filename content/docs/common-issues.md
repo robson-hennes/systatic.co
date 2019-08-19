@@ -4,7 +4,6 @@ documentation: true
 order: 12
 ---
 
-# Common Issues
 ## My WordPress import fails
 Sometimes, Importing from WordPress fails. There are many reasons this could happen.
 * You've locked down the WordPress REST API to require authentication.

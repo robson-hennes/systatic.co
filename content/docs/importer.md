@@ -4,7 +4,6 @@ documentation: true
 order: 10
 ---
 
-# Importer
 Systatic has a few importer to make it easy to import your content from other static site generators or CMS's.
 
 ## WordPress

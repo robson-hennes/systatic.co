@@ -4,7 +4,6 @@ documentation: true
 order: 9
 ---
 
-# Plugins
 Plugins in Systatic are special Composer packages which add extra functionality to your Systatic site.
 
 ## Installing a plugin

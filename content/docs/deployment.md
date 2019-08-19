@@ -4,7 +4,6 @@ documentation: true
 order: 5
 ---
 
-# Deployment
 Systatic can go anywhere that supports static HTML files. This means you can literally host your site anywhere, even shared hosting if you really want to.
 
 ## Hosting
