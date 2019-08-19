@@ -1,5 +1,7 @@
 <?php
 
+use Zttp\Zttp;
+
 return [
     'name' => 'Systatic',
     'url' => 'https://systatic.co',
@@ -30,18 +32,18 @@ return [
             'build' => false,
 
             'remote' => function () {
-                $response = \Zttp\Zttp::get('https://api.github.com/repos/damcclean/systatic/releases');
+                $response = Zttp::get('https://api.github.com/repos/damcclean/systatic/releases');
                 $releases = convert_to_object($response->json());
 
-                $parsedown = new \Damcclean\Markdown\MetaParsedown();
+                $markdown = new \Damcclean\Systatic\Parsers\ParsedownExtra();
 
-                return collect($releases)->map(function ($release) use (&$parsedown) {
+                return collect($releases)->map(function ($release) use (&$markdown) {
                     return [
                         'title' => $release->name,
                         'slug' => $release->id,
                         'date' => \Carbon\Carbon::parse($release->published_at)->format('jS F Y'),
                         'github' => $release->url,
-                        'content' => $parsedown->text($release->body),
+                        'content' => $markdown->parse($release->body),
                     ];
                 });
             },
