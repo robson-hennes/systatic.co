@@ -5,90 +5,87 @@ order: 9
 ---
 
 # Plugins
-## How to install a plugin
-Once you've found a Systatic plugin you want to use, install it via composer.
+Plugins in Systatic are special Composer packages which add extra functionality to your Systatic site.
 
-```
-$ composer require developer/plugin-name
+## Installing a plugin
+Once you've found a Systatic plugin/package you want to use, you'll need to install it via [Composer](https://getcomposer.org/).
+
+```bash
+$ composer require damcclean/systatic-table-of-contents
 ```
 
-Then you'll want to register the plugin in your config file. Usually plugins will give you the class to register
+After you install via Composer, you'll also need to add the namespace of it's provider to your configuration file.
 
 ```php
+...
 'plugins' => [
-		'\Developer\PluginName\PluginName'
+	Damcclean\SystaticTableOfContents\TableOfContentsProvider::class
 ]
 ```
 
-Then that'll be you done! You'll have the plugin installed and all the capabilities that it comes with.
+That's it installed! Some plugins may have additional install steps, so you'll also need to follow those.
 
-## How to create a plugin
-Plugins are just Composer packages that are specifically for Systatic.
+## Building a plugin
 
-We recommend using the [Laravel Package Boilerplate](https://laravelpackageboilerplate.com/) for the base of your package. Just create a PHP project with it.
+Because a plugin is essensially just a Composer package, the structure and setup is the really just the same as any other normal Composer package.
 
-Next, create a `boot` method with a return array, just like this, in the main class of your package.
-
-```php
-public function boot()
-{
-    return [
-        	//
-    ];
-}
-```
-
-Next, you can add things to your plugin - like Commands, Templating Languages and Views.
-
-## Commands
-Plugins can register their own commands.
-
-To do this, create a new PHP file called something like `Commands.php`. The file should look like this:
+Systatic uses 'Providers' to register and bootstrap things your plugin needs. A provider is also the class that you give to your users for them to put in their `config.php` file. A standard Provider looks like this:
 
 ```php
 <?php
 
-namespace Damcclean\HelloWorld;
+namespace Damcclean\Bacon;
+
+use Damcclean\Systatic\Plugins\BaseProvider;
+
+class SystaticCmsProvider extends BaseProvider
+{
+	public function boot()
+	{
+		//
+	}
+}
+
+```
+
+Currently, there are only a few things that plugins can extend upon, those things are:
+* Console
+* Compiler
+* Views
+
+### Console
+
+To register console commands, you'll need to create a new class within your plugin which looks like this:
+
+```php
+<?php
+
+namespace Damcclean\Bacon\Commands;
 
 class Commands
 {
-    public function console()
+    public function __invoke()
     {
         return [
-	        //        
-		    ];
+        	//
+        ];
     }
 }
 ```
 
-And add this line to the array in your `boot` method in your packages's main class.
-
-```php
-public function boot()
-{
-	return [
-    'commands' => '\Developer\PackageName\Commands'
-	];
-}
-```
-
-Now that you've done that, it's time to create the actual command. 
-
-Systatic's command line is built on top of [Laravel's artisan command line](https://laravel.com/docs/5.8/artisan). So everything that works over there will work on Systatic.
-
-Create a new PHP file for your command, like `HelloWorldCommand.php`. Then your command file should look like this:
+You'll also need to create classes for each of the commands you want. The commands uses the same stuff that powers [Laravel's Artisan](https://laravel.com/docs/5.8/artisan) commands which means your command classes look like this:
 
 ```php
 <?php
 
-namespace Damcclean\HelloWorld;
+namespace Damcclean\Bacon\Commands;
 
 use Illuminate\Console\Command;
 
-class HelloWorldCommand extends Command
+class BaconCommand extends Command
 {
-    protected $signature = 'hello:world';
-    protected $description = 'Displays a hello world message to the user';
+    protected $signature = 'cms:start';
+    protected $description = 'Starts Systatic CMS';
 
     public function __construct()
     {
@@ -97,133 +94,68 @@ class HelloWorldCommand extends Command
 
     public function handle()
     {
-        $this->info('Hello World!');
+        $this->info('Bacon!!!');
     }
 }
 ```
 
-All you need to do now is add the namespace of the `HelloWorldCommand` to the array in your `Commands.php` file.
+Now all your left to do, is actually register the commands which can be done in your provider.
 
 ```php
-return [
-        '\Damcclean\HelloWorld\HelloWorldCommand'
+use Damcclean\Bacon\Console\Commands;
+...
+public function boot()
+{
+	$this->registerConsole(Commands::class);
+}
+```
+
+### Compiler
+
+If you want to use a templating language that we don't provide out-of-the-box (so anything other than Blade), you can create your own custom compiler.
+
+First things first, create a new class for your compiler, like `TwigCompiler.php`. Inside the compiler class, add some like this:
+
+```php
+...
+
+public $extensions = [
+	'.twig',
 ];
+
+public function compile(array $data)
+{
+	return true;
+}
 ```
 
-## Available APIs
-Plugins have access to all the same APIs as Systatic does. This means you can do things like reading from collections or getting configuration values.
+The `$extensions` variable is an array of the file endings/extensions that should use this templating language. Remember to put `.` at the start of the extensions.
 
-We'll document some of the APIs we have available here, but for the rest you'll need to source dive.
+The `compile` function is the method we automaticlly call when we want to compile using your compiler. Remember to pull in the `$data` array, it will be passed in when we call the compiler.
 
-### Config (Damcclean\Systatic\Config\Config)
-#### Get config value
+Once you've got the Compiler class sorted, just register it in your Provider.
 
 ```php
-$config = new \Damcclean\Systatic\Config\Config();
-return $config->get('name'); // returns string
+use Damcclean\SystaticTwig\TwigCompiler;
+...
+public function boot()
+{
+	$this->registerCompiler(TwigCompiler::class);
+}
 ```
 
-#### Get config as array
+Now any views with the file endings you specified will be compiled using your compiler, otherwise they will go to the default Blade compiler.
+
+### Views
+
+If your plugin needs to push out some custom views you can do that at built time, just by adding an array of the files you want to copy to your provider.
 
 ```php
-$config = new \Damcclean\Systatic\Config\Config();
-return $config->getArray(); // returns array
+...
+public function boot()
+{
+	$this->publishViews([
+		'./source.blade.php' => 'target.blade.php
+	]);
+}
 ```
-
-#### Get env value
-
-```php
-$config = new \Damcclean\Systatic\Config\Config();
-return $config->env('APP_ENV'); // returns string
-```
-
-### Collections (Damcclean\Systatic\Collections\Collections)
-#### Do everything 
-
-```php
-$collections = new \Damcclean\Systatic\Collections\Collections();
-return $collections->collect(); // Returns boolean
-```
-
-#### Save the store
-
-```php
-$collections = new \Damcclean\Systatic\Collections\Collections();
-$store = []; // needs to be a valid array, formatted in the right way
-return $collections->save($store); // Returns boolean
-```
-
-#### Fetch the store (as an array)
-
-```php
-$collections = new \Damcclean\Systatic\Collections\Collections();
-return $collections->fetch(); // Returns array
-```
-
-#### Fetch the store (as JSON)
-
-```php
-$collections = new \Damcclean\Systatic\Collections\Collections();
-return $collections->fetchAsJson(); // Returns json
-```
-
-### Filesystem (Damcclean\Systatic\Filesystem\Filesystem)
-We have a nice layer on top of Symfony's Filesystem package.
-
-#### Create a file
-```php
-$filesystem = new \Damcclean\Systatic\Filesystem\Filesystem();
-return $filesystem->createFile('filename.txt'); 
-```
-
-#### Create a directory
-
-```php
-$filesystem = new \Damcclean\Systatic\Filesystem\Filesystem();
-return $filesystem->createDirectory('directory-name'); 
-```
-
-#### Copy a file
-
-```php
-$filesystem = new \Damcclean\Systatic\Filesystem\Filesystem();
-return $filesystem->copy('./source', './destination'); 
-```
-
-#### Copy a directory
-
-```php
-$filesystem = new \Damcclean\Systatic\Filesystem\Filesystem();
-return $filesystem->copyDirectory('./source', './destination'); 
-```
-
-#### Append to the end of a file
-
-```php
-$filesystem = new \Damcclean\Systatic\Filesystem\Filesystem();
-return $filesystem->append('filename.txt', 'Text'); 
-```
-
-#### Dump to a file
-
-```php
-$filesystem = new \Damcclean\Systatic\Filesystem\Filesystem();
-return $filesystem->dump('filename.txt', 'Text'); 
-```
-
-#### Rename a file or directory
-
-```php
-$filesystem = new \Damcclean\Systatic\Filesystem\Filesystem();
-return $filesystem->rename('old.txt', 'new.txt'); 
-```
-
-#### Delete a file or directory
-
-```php
-$filesystem = new \Damcclean\Systatic\Filesystem\Filesystem();
-return $filesystem->delete('filename.txt'); 
-```
-
-## Publishing your plugin
-[This guide](https://github.com/CurrencyCloud/currencycloud-php/wiki/Publishing-package-to-Packagist) talks you through publishing your plugin/package to Packages, the Composer registry.
