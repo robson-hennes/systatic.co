@@ -4,9 +4,10 @@ vendor
 .DS_Store
 package-lock.json
 yarn.lock
-
 mix-manifest.json
 dist/css/app.css
 dist/js/app.js
-dist/*.html
 .idea
+dist/*.html
+dist/*/*.html
+dist/*/*/*.html
