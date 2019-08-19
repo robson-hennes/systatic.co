@@ -1,1 +1,0 @@
-<script> window.siteId = '5d13ccd10c5bb'; </script> <script src="https://bob.iamlittle.co.uk/script.js"></script><?php /**PATH /Users/duncan/Sites/systatic-site/views/partials/extras/scripts.blade.php ENDPATH**/ ?>
