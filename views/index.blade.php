@@ -35,9 +35,15 @@
             </div>
         </header>
 
-        <main class="container mx-auto flex flex-row">
-            <div class="md:w-1/3 hidden md:block">
-                <div class="flex flex-col">
+        <main class="container mx-auto flex flex-col md:flex-row">
+            <div class="w-full md:w-1/3">
+                <div class="px-2">
+                    <button class="w-full bg-gray-200 p-2 rounded-lg mb-2 text-center text-gray-800 font-semibold uppercase" onclick="toggleNav()">
+                        Toggle Navigation
+                    </button>
+                </div>
+
+                <div id="hamburger-menu" class="flex flex-col hidden md:block">
                     @foreach($navigation as $name => $links)
                         <div id="{{ str_replace(' ', '-', strtolower($name)) }}" class="flex flex-col mb-6 p-2">
                             <h3 class="font-bold uppercase text-sm text-gray-600 mb-1">{{ $name }}</h3>
@@ -92,5 +98,18 @@
     </div>
 
     <script src="/js/app.js"></script>
+    <script>
+        function toggleNav() {
+            var menu = document.getElementById('hamburger-menu');
+
+            console.log(menu.classList.contains('hidden'));
+
+            if(menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+            } else {
+                menu.classList.add('hidden');
+            }
+        }
+    </script>
 </body>
 </html>
