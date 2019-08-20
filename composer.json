@@ -1,6 +1,6 @@
 {
     "require": {
-        "damcclean/systatic": "2.1.*",
+        "damcclean/systatic": "2.1.1",
         "kitetail/zttp": "^0.6.0"
     }
 }
