@@ -6,40 +6,40 @@
 
 #markdown {
     @apply leading-relaxed text-gray-700 mb-24;
-}
 
-#markdown h2 {
-    @apply text-2xl text-gray-800 font-semibold mb-2 mt-4;
-}
+    h2 {
+        @apply text-2xl text-gray-800 font-semibold mb-2 mt-4;
+    }
 
-#markdown h3 {
-    @apply text-xl text-gray-800 font-semibold mb-2 mt-4;
-}
+    h3 {
+        @apply text-xl text-gray-800 font-semibold mb-2 mt-4;
+    }
 
-#markdown h4 {
-    @apply text-lg text-gray-800 font-semibold mb-2 mt-4;
-}
+    h4 {
+        @apply text-lg text-gray-800 font-semibold mb-2 mt-4;
+    }
 
-#markdown h5 {
-    @apply text-base text-gray-800 font-semibold mb-2 mt-4;
-}
+    h5 {
+        @apply text-base text-gray-800 font-semibold mb-2 mt-4;
+    }
 
-#markdown p {
-    @apply text-base;
-}
+    p {
+        @apply text-base;
+    }
 
-#markdown a {
-    @apply underline font-semibold;
-}
+    a {
+        @apply underline font-semibold;
+    }
 
-#markdown ul {
-    @apply list-disc ml-8;
-}
+    ul {
+        @apply list-disc ml-8;
+    }
 
-#markdown blockquote {
-    @apply p-2 rounded-lg bg-gray-200 my-4;
-}
+    blockquote {
+        @apply p-2 rounded-lg bg-gray-200 my-4;
+    }
 
-#markdown pre code {
-    @apply rounded-lg my-4;
+    pre code {
+        @apply rounded-lg my-4;
+    }
 }
