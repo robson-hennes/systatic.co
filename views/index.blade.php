@@ -74,7 +74,7 @@
                             <div class="@if(! $loop->first) mt-4 @endif border-b-2 border-gray-200">
                                 <div id="{{ $release->slug }}" class="flex flex-row items-center justify-between mb-2">
                                     <h3 class="text-2xl">
-                                        <a class="mb-2 no-underline text-gray-700 active:text-primary" href="#{{ $release->slug }}">
+                                        <a class="mb-2 no-underline text-gray-700 active:text-systatic" href="#{{ $release->slug }}">
                                             {{ $release->title }}
                                         </a>
                                     </h3>

@@ -1,12 +1,11 @@
 module.exports = {
-    theme: {
-      extend: {
-        colors: {
-            'primary': '#FFB305',
-            'secondary': '#EBA300',
-        }
+  theme: {
+    extend: {
+      colors: {
+        'systatic': '#FFB305',
       }
-    },
+    }
+  },
     variants: {},
-    plugins: []
-  }
+  plugins: []
+}
