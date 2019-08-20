@@ -36,7 +36,7 @@
         </header>
 
         <main class="container mx-auto flex flex-row">
-            <div class="md:w-1/3">
+            <div class="md:w-1/3 hidden md:block">
                 <div class="flex flex-col">
                     @foreach($navigation as $name => $links)
                         <div id="{{ str_replace(' ', '-', strtolower($name)) }}" class="flex flex-col mb-6 p-2">
@@ -56,7 +56,7 @@
                 </div>
             </div>
 
-            <div class="md:w-2/3">
+            <div class="md:w-2/3 p-2 md:p-0">
                 <article id="{{ $slug }}" class="md:w-2/3">
                     <h2 class="text-2xl font-semibold">{{ $title }}</h2>
                     <p class="mt-1 text-gray-600">{{ $description }}</p>
