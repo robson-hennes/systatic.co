@@ -1,7 +1,6 @@
 ---
 title: Updating
-documentation: true
-order: 2
+description: A guide for keeping up-to-date with Systatic.
 ---
 
 Since Systatic is updated on a regular basis, you likely want to stay on the latest version. 
@@ -17,12 +16,12 @@ We've got two small changes you'll need to make when upgrading to v2.1.0.
 
 ### Replace meta and config variables in your views
 
-```
-Before:
+```bash
+// Before:
 $meta->author
 $config->url
 
-After:
+// After:
 $author
 $url
 ```
@@ -48,7 +47,7 @@ Then reinstall all your composer dependencies using `composer install`.
 ### Update your Systatic console file
 You'll need to update your `systatic` file to the latest one. You can do that with this command:
 
-```
+```bash
 cp -rf ./vendor/damcclean/systatic/stubs/site/systatic .
 ```
 

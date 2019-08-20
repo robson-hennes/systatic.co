@@ -1,11 +1,11 @@
 ---
 title: Plugins
-documentation: true
-order: 9
+description: Guide to how plugins work and how they can extend the core of Systatic.
 ---
 
 Plugins in Systatic are special Composer packages which add extra functionality to your Systatic site.
 
+<a name="install" />
 ## Installing a plugin
 Once you've found a Systatic plugin/package you want to use, you'll need to install it via [Composer](https://getcomposer.org/).
 
@@ -24,6 +24,7 @@ After you install via Composer, you'll also need to add the namespace of it's pr
 
 That's it installed! Some plugins may have additional install steps, so you'll also need to follow those.
 
+<a name="building" />
 ## Building a plugin
 
 Because a plugin is essensially just a Composer package, the structure and setup is the really just the same as any other normal Composer package.
@@ -154,7 +155,7 @@ If your plugin needs to push out some custom views you can do that at built time
 public function boot()
 {
 	$this->publishViews([
-		'./source.blade.php' => 'target.blade.php
+		'./source.blade.php' => 'target.blade.php'
 	]);
 }
 ```

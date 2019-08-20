@@ -1,4 +1,4 @@
 ---
 title: Changelog
-view: changelog
+description: Keep up-to-date with the latest updates in Systatic.
 ---

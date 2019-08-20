@@ -1,7 +1,6 @@
 ---
 title: Building
-documentation: true
-order: 4
+description: Learn how to build your site for development or production.
 ---
 
 Whenever you make changes to any of your views, your content or configuration, you'll want to rebuild your site.

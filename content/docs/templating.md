@@ -1,10 +1,7 @@
 ---
 title: Templating
-documentation: true
-order: 6
+description: Sharpen your blade skills to be ready for Systatic.
 ---
-
-**When using a different templating language, you'll need to convert all of your views to using that new templating language.**
 
 ## Available variables
 In your views, you can use variables to output data from Systatic.

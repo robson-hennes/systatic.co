@@ -23,7 +23,6 @@ return [
             'name' => 'Documentation',
             'permalink' => '/docs/',
             'location' => './content/docs',
-            'view' => 'docs',
         ],
 
         'releases' => [
@@ -43,34 +42,10 @@ return [
                         'slug' => $release->id,
                         'date' => \Carbon\Carbon::parse($release->published_at)->format('jS F Y'),
                         'github' => $release->url,
-                        'content' => $markdown->parse($release->body),
+                        'content' => $markdown->parse('---\n \n---'.$release->body),
                     ];
                 });
             },
-        ],
-    ],
-
-    'nav' => [
-        [
-            'name' => 'Documentation',
-            'target' => '/docs/installation',
-        ],
-        [
-            'name' => 'Changelog',
-            'target' => '/changelog',
-        ],
-    ],
-
-    'social' => [
-        [
-            'name' => 'Github',
-            'icon' => '/images/github.svg',
-            'url' => 'https://github.com/damcclean/systatic',
-        ],
-        [
-            'name' => 'Discord',
-            'icon' => '/images/discord.svg',
-            'url' => 'https://discord.gg/zSg3MHv',
         ],
     ],
 
@@ -80,4 +55,29 @@ return [
             'target' => '/docs/installation',
         ],
     ],
+
+    'navigation' => [
+        'Getting Started' => [
+            'Installation' => '/docs/installation',
+            'Updating' => '/docs/updating',
+            'Configuration' => '/docs/configuration',
+            'Building' => '/docs/building',
+            'Content' => '/docs/content',
+            'Deployment' => '/docs/deployment',
+        ],
+        'Features' => [
+            'Collections' => '/docs/collections',
+            'Templating' => '/docs/templating',
+            'Importer' => '/docs/importer',
+            'Redirects' => '/docs/redirects',
+        ],
+        'Plugins' => [
+            'Installation' => '/docs/plugins#install',
+            'Development' => '/docs/plugins#building',
+        ],
+        'Miscellaneous' => [
+            'Changelog' => '/changelog',
+            'Common Issues' => '/docs/common-issues',
+        ]
+    ]
 ];

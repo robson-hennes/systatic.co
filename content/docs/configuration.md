@@ -1,10 +1,7 @@
 ---
 title: Configuration
-documentation: true
-order: 3
+description: Systatic has configuration nailed! (at least we think so)
 ---
-
-Systatic has configuration nailed! (at least we think so)
 
 ## Config file
 Every site has a `config.php` file. It's the main place for configuration in Systatic.

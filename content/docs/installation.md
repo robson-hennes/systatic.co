@@ -1,7 +1,6 @@
 ---
 title: Installation
-documentation: true
-order: 1
+description: Quick start guide for getting started with Systatic.
 ---
 
 ## System Requirements

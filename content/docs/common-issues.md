@@ -1,7 +1,6 @@
 ---
-title: 'Common Issues'
-documentation: true
-order: 12
+title: Common Issues
+description: A few issues developers have with Systatic
 ---
 
 ## My WordPress import fails

@@ -1,1 +1,2 @@
-// More coming soon!
+import hljs from 'highlight.js';
+hljs.initHighlightingOnLoad();
