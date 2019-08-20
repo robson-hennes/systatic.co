@@ -28,10 +28,18 @@
     @apply text-base;
 }
 
+#markdown a {
+    @apply underline font-semibold;
+}
+
 #markdown ul {
     @apply list-disc ml-8;
 }
 
-pre code {
+#markdown blockquote {
+    @apply p-2 rounded-lg bg-gray-200 my-4;
+}
+
+#markdown pre code {
     @apply rounded-lg my-4;
 }

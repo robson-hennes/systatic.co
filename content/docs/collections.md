@@ -81,6 +81,8 @@ You'll also want to add the `searchable` property to any collection you want to 
 
 Now, every time you build your site, Algolia will index your collections.
 
+<a name="remote" /> 
+
 ## Remote Collections
 Remote Collections are like normal collections but instead of the content being inside Markdown files they are somewhere else, like in a Headless CMS.
 
