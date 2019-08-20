@@ -38,7 +38,7 @@
         <main class="container mx-auto flex flex-col md:flex-row">
             <div class="w-full md:w-1/3">
                 <div class="px-2">
-                    <button class="w-full bg-gray-200 p-2 rounded-lg mb-2 text-center text-gray-800 font-semibold uppercase" onclick="toggleNav()">
+                    <button class="w-full bg-gray-200 p-2 rounded-lg mb-2 text-center text-gray-800 font-semibold uppercase md:hidden" onclick="toggleNav()">
                         Toggle Navigation
                     </button>
                 </div>
