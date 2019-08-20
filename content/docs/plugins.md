@@ -5,7 +5,7 @@ description: Guide to how plugins work and how they can extend the core of Systa
 
 Plugins in Systatic are special Composer packages which add extra functionality to your Systatic site.
 
-<a name="install" />
+<a name="install"> </a>
 ## Installing a plugin
 Once you've found a Systatic plugin/package you want to use, you'll need to install it via [Composer](https://getcomposer.org/).
 
@@ -24,7 +24,7 @@ After you install via Composer, you'll also need to add the namespace of it's pr
 
 That's it installed! Some plugins may have additional install steps, so you'll also need to follow those.
 
-<a name="building" />
+<a name="building"> </a>
 ## Building a plugin
 
 Because a plugin is essensially just a Composer package, the structure and setup is the really just the same as any other normal Composer package.
