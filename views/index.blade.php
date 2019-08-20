@@ -65,14 +65,14 @@
 
                     @if($slug === 'changelog')
                         @foreach($releases as $release)
-                            <div class="my-4 border-b-2 border-gray-200">
+                            <div class="@if(! $loop->first) mt-4 @endif border-b-2 border-gray-200">
                                 <div id="{{ $release->slug }}" class="flex flex-row items-center justify-between mb-2">
-                                    <h3>
-                                        <a class="text-4xl mb-2 no-underline text-primary" href="#{{ $release->slug }}">
+                                    <h3 class="text-2xl">
+                                        <a class="mb-2 no-underline text-gray-700" href="#{{ $release->slug }}">
                                             {{ $release->title }}
                                         </a>
                                     </h3>
-                                    <h4 class="text-lg">
+                                    <h4 class="text-base text-gray-500">
                                         {{ $release->meta->date }}
                                     </h4>
                                 </div>
