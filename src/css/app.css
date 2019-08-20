@@ -28,9 +28,9 @@
     @apply text-base;
 }
 
-/*
-    Code Blocks
- */
+#markdown ul {
+    @apply list-disc ml-8;
+}
 
 pre code {
     @apply rounded-lg my-4;
