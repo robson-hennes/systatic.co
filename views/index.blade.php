@@ -24,11 +24,11 @@
                 </div>
 
                 <div class="flex flex-row items-center">
-                    <a class="w-4 mr-4" href="https://discord.gg/zSg3MHv">
+                    <a class="w-5 mr-4" href="https://discord.gg/zSg3MHv">
                         <img src="/images/discord.svg" alt="Discord">
                     </a>
 
-                    <a class="w-4" href="https://github.com/damcclean/systatic">
+                    <a class="w-5" href="https://github.com/damcclean/systatic">
                         <img src="/images/github.svg" alt="Github">
                     </a>
                 </div>
