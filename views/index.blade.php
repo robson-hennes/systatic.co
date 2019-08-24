@@ -64,8 +64,8 @@
 
             <div class="md:w-2/3 p-2 md:p-0">
                 <article id="{{ $slug }}" class="md:w-2/3">
-                    <h2 class="text-2xl font-semibold">{{ $title }}</h2>
-                    <p class="mt-1 text-gray-600">{{ $description }}</p>
+                    <h2 id="page-title" class="text-2xl font-semibold">{{ $title }}</h2>
+                    <p id="page-subtitle" class="mt-1 text-gray-600">{{ $description }}</p>
 
                     <div class="border-b-2 border-gray-200 my-6"></div>
 
