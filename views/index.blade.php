@@ -2,6 +2,7 @@
 <html>
 <head>
     <link rel="stylesheet" href="/css/app.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
 
     <meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,8 +20,8 @@
                     Systatic
                 </a>
 
-                <div class="md:w-1/2">
-                    <input class="w-full p-2 border-2 rounded-lg bg-white shadow-md text-gray-700 font-normal focus:outline-none focus:font-semibold" id="search" placeholder="Search the docs">
+                <div class="md:w-1/2" id="search-container">
+                    <input class="w-full p-2 border-2 rounded-lg bg-white shadow-md text-gray-700 font-normal focus:outline-none focus:font-semibold" id="search-box" placeholder="Search the docs">
                 </div>
 
                 <div class="flex flex-row items-center">
@@ -110,6 +111,15 @@
                 menu.classList.add('hidden');
             }
         }
+    </script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+    <script type="text/javascript"> docsearch({
+            apiKey: 'f84ff1c0dc6742b5727fc5d67f8a745b',
+            indexName: 'systatic',
+            inputSelector: '#search-box',
+            debug: false
+        });
     </script>
 </body>
 </html>

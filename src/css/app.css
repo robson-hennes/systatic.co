@@ -43,3 +43,9 @@
         @apply rounded-lg my-4;
     }
 }
+
+#search-container {
+    span {
+        @apply w-full;
+    }
+}
