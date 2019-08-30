@@ -19,6 +19,7 @@ mix.js('src/js/app.js', 'dist/js')
 
 if (mix.inProduction()) {
     mix.purgeCss({
-        folders: ['content', 'src', 'views']
+        folders: ['content', 'src', 'views'],
+        whitelist: ['blockquote']
     });
 }
