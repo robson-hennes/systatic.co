@@ -70,7 +70,7 @@
                         @if(isset($description))
                             {{ $description }}
                         @else
-                            Last updated on {{ $last_updated }}
+                            Last updated on {{ \Carbon\Carbon::parse($last_updated)->toFormattedDateString() }}.
                         @endif
                     </p>
 
