@@ -1,6 +1,5 @@
 ---
 title: Updating
-description: A guide for keeping up-to-date with Systatic.
 ---
 
 Since Systatic is updated on a regular basis, you likely want to stay on the latest version. 

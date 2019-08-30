@@ -1,6 +1,5 @@
 ---
 title: Common Issues
-description: A few issues developers have with Systatic
 ---
 
 ## My WordPress import fails

@@ -1,6 +1,5 @@
 ---
 title: Plugins
-description: Guide to how plugins work and how they can extend the core of Systatic.
 ---
 
 Plugins in Systatic are special Composer packages which add extra functionality to your Systatic site.

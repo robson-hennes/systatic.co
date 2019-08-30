@@ -1,6 +1,5 @@
 ---
 title: Templating
-description: Sharpen your blade skills to be ready for Systatic.
 ---
 
 ## Available variables

@@ -1,6 +1,5 @@
 ---
 title: Content
-description: Learn about how to format your content in Markdown
 ---
 
 All content (that is not remote) is in Markdown files. We'll detect any `.md` or `.markdown` files in two levels of your collection's location. 

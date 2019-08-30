@@ -1,6 +1,5 @@
 ---
 title: Configuration
-description: Systatic has configuration nailed! (at least we think so)
 ---
 
 ## Config file

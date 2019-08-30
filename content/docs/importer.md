@@ -1,6 +1,5 @@
 ---
 title: Importer
-description: Grab everything from your previous system and load it into Markdown, ready for Systatic to build.
 ---
 
 Systatic has a few importer to make it easy to import your content from other static site generators or CMS's.

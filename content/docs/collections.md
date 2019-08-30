@@ -1,6 +1,5 @@
 ---
 title: Collections
-description: Collections are the source of truth for Systatic, knowing how they work will help you along the way.
 ---
 
 Collections is the new system to deal with content in Systatic.

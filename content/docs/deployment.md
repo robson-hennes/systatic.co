@@ -1,6 +1,5 @@
 ---
 title: Deployment
-description: Now you're ready for prime time but where do you put your site?
 ---
 
 Systatic can go anywhere that supports static HTML files. This means you can literally host your site anywhere, even shared hosting if you really want to.
