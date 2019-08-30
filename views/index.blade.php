@@ -52,7 +52,7 @@
                             <ul class="flex flex-col m-0 list-none">
                                 @foreach($links as $name => $url)
                                     <li id="{{ str_replace(' ', '-', strtolower($name)) }}" class="hover:ml-2 mt-1 mb-1">
-                                        <a class="hover:font-semibold active:font-semibold text-gray-900 hover:text-gray-900 text-md" href="{{ $url }}">
+                                        <a class="hover:font-semibold active:font-semibold hover:text-systatic active:text-systatic text-gray-900 hover:text-gray-900 text-md" href="{{ $url }}">
                                             {{ $name }}
                                         </a>
                                     </li>
